@@ -1,0 +1,155 @@
+
+Processing scipy.C...
+In file included from input_line_8:1:
+/home/ozapatam/tmp/root_scipy_tests/scipy.C:42:4: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+   }
+   ^
+=== Scipy Minimization
+=== Method: Nelder-Mead
+=== Initial value: (-1.2,1)
+/home/ozapatam/.local/lib/python3.10/site-packages/scipy/optimize/_minimize.py:542: RuntimeWarning: Method Nelder-Mead does not use gradient information (jac).
+  warn('Method %s does not use gradient information (jac).' % method,
+/home/ozapatam/.local/lib/python3.10/site-packages/scipy/optimize/_minimize.py:547: RuntimeWarning: Method Nelder-Mead does not use Hessian information (hess).
+  warn('Method %s does not use Hessian information (hess).' % method,
+=== Status: 0
+=== Message: Optimization terminated successfully.
+=== Function calls: 143
+Minimum: f(1.00025,1.00048): 1.00244e-07
+
+===============
+=== Scipy Minimization
+=== Method: L-BFGS-B
+=== Initial value: (-1.2,1)
+/home/ozapatam/.local/lib/python3.10/site-packages/scipy/optimize/_minimize.py:547: RuntimeWarning: Method L-BFGS-B does not use Hessian information (hess).
+  warn('Method %s does not use Hessian information (hess).' % method,
+=== Status: 0
+=== Message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+=== Function calls: 41
+Minimum: f(0.998232,0.99611): 1.59199e-05
+
+===============
+=== Scipy Minimization
+=== Method: Powell
+=== Initial value: (-1.2,1)
+/home/ozapatam/.local/lib/python3.10/site-packages/scipy/optimize/_minimize.py:542: RuntimeWarning: Method Powell does not use gradient information (jac).
+  warn('Method %s does not use gradient information (jac).' % method,
+/home/ozapatam/.local/lib/python3.10/site-packages/scipy/optimize/_minimize.py:547: RuntimeWarning: Method Powell does not use Hessian information (hess).
+  warn('Method %s does not use Hessian information (hess).' % method,
+=== Status: 0
+=== Message: Optimization terminated successfully.
+=== Function calls: 593
+Minimum: f(1,1): 1.97364e-27
+
+===============
+=== Scipy Minimization
+=== Method: CG
+=== Initial value: (-1.2,1)
+/home/ozapatam/.local/lib/python3.10/site-packages/scipy/optimize/_minimize.py:547: RuntimeWarning: Method CG does not use Hessian information (hess).
+  warn('Method %s does not use Hessian information (hess).' % method,
+=== Status: 0
+=== Message: Optimization terminated successfully.
+=== Function calls: 76
+Minimum: f(0.999882,0.999763): 1.40068e-08
+
+===============
+=== Scipy Minimization
+=== Method: BFGS
+=== Initial value: (-1.2,1)
+/home/ozapatam/.local/lib/python3.10/site-packages/scipy/optimize/_minimize.py:547: RuntimeWarning: Method BFGS does not use Hessian information (hess).
+  warn('Method %s does not use Hessian information (hess).' % method,
+=== Status: 0
+=== Message: Optimization terminated successfully.
+=== Function calls: 38
+Minimum: f(0.999998,0.999995): 1.73581e-11
+
+===============
+=== Scipy Minimization
+=== Method: TNC
+=== Initial value: (-1.2,1)
+/home/ozapatam/.local/lib/python3.10/site-packages/scipy/optimize/_minimize.py:547: RuntimeWarning: Method TNC does not use Hessian information (hess).
+  warn('Method %s does not use Hessian information (hess).' % method,
+=== Status: 0
+=== Message: Converged (|f_n-f_(n-1)| ~= 0)
+=== Function calls: 70
+Minimum: f(0.982282,0.96509): 0.000318446
+
+===============
+=== Scipy Minimization
+=== Method: COBYLA
+=== Initial value: (-1.2,1)
+/home/ozapatam/.local/lib/python3.10/site-packages/scipy/optimize/_minimize.py:542: RuntimeWarning: Method COBYLA does not use gradient information (jac).
+  warn('Method %s does not use gradient information (jac).' % method,
+/home/ozapatam/.local/lib/python3.10/site-packages/scipy/optimize/_minimize.py:547: RuntimeWarning: Method COBYLA does not use Hessian information (hess).
+  warn('Method %s does not use Hessian information (hess).' % method,
+=== Status: 0
+=== Message: Optimization terminated successfully.
+=== Function calls: 867
+Minimum: f(0.734408,0.540742): 0.0707316
+
+===============
+=== Scipy Minimization
+=== Method: SLSQP
+=== Initial value: (-1.2,1)
+/home/ozapatam/.local/lib/python3.10/site-packages/scipy/optimize/_minimize.py:547: RuntimeWarning: Method SLSQP does not use Hessian information (hess).
+  warn('Method %s does not use Hessian information (hess).' % method,
+=== Status: 0
+=== Message: Optimization terminated successfully
+=== Function calls: 44
+Minimum: f(0.981303,0.962314): 0.000390783
+
+===============
+=== Scipy Minimization
+=== Method: trust-constr
+=== Initial value: (-1.2,1)
+=== Status: 0
+=== Message: `gtol` termination condition is satisfied.
+=== Function calls: 41
+Minimum: f(0.999696,0.999392): 9.22675e-08
+
+===============
+=== Scipy Minimization
+=== Method: Newton-CG
+=== Initial value: (-1.2,1)
+=== Status: 0
+=== Message: Optimization terminated successfully.
+=== Function calls: 88
+Minimum: f(0.905309,0.819262): 0.00897678
+
+===============
+=== Scipy Minimization
+=== Method: dogleg
+=== Initial value: (-1.2,1)
+=== Status: 0
+=== Message: Optimization terminated successfully.
+=== Function calls: 24
+Minimum: f(0.999998,0.999997): 2.89669e-12
+
+===============
+=== Scipy Minimization
+=== Method: trust-ncg
+=== Initial value: (-1.2,1)
+=== Status: 0
+=== Message: Optimization terminated successfully.
+=== Function calls: 28
+Minimum: f(0.999499,0.998996): 2.5166e-07
+
+===============
+=== Scipy Minimization
+=== Method: trust-exact
+=== Initial value: (-1.2,1)
+=== Status: 0
+=== Message: Optimization terminated successfully.
+=== Function calls: 25
+Minimum: f(0.999996,0.999991): 6.29718e-11
+
+===============
+=== Scipy Minimization
+=== Method: trust-krylov
+=== Initial value: (-1.2,1)
+=== Status: 0
+=== Message: Optimization terminated successfully.
+=== Function calls: 37
+Minimum: f(0.99993,0.999861): 4.85305e-09
+
+===============
+(int) 0
