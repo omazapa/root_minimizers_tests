@@ -4,30 +4,6 @@
 #include <string>
 #include "Math/MinimizerOptions.h"
 
-// Class with gradient
-
-class RosenBrockGradientFunction : public ROOT::Math::IGradientFunctionMultiDim {
-public:
-   double DoEval(const double *xx) const
-   {
-      const Double_t x = xx[0];
-      const Double_t y = xx[1];
-      const Double_t tmp1 = y - x * x;
-      const Double_t tmp2 = 1 - x;
-      return 100 * tmp1 * tmp1 + tmp2 * tmp2;
-   }
-   unsigned int NDim() const { return 2; }
-   ROOT::Math::IGradientFunctionMultiDim *Clone() const { return new RosenBrockGradientFunction(); }
-   double DoDerivative(const double *x, unsigned int ipar) const
-   {
-      if (ipar == 0)
-         return -2 * (1 - x[0]) + 200 * (x[1] - x[0] * x[0]) * (-2 * x[0]);
-      else
-         return 200 * (x[1] - x[0] * x[0]);
-   }
-};
-
-
 class Wood4GradientFunction : public ROOT::Math::IGradientFunctionMultiDim {
 public:
    double DoEval(const double *par) const
@@ -47,7 +23,7 @@ public:
   return 100*tmp1*tmp1+w1*w1+90*tmp2*tmp2+y1*y1+10.1*(x1*x1+z1*z1)+19.8*x1*z1;
    }
    unsigned int NDim() const { return 4; }
-   ROOT::Math::IGradientFunctionMultiDim *Clone() const { return new RosenBrockGradientFunction(); }
+   ROOT::Math::IGradientFunctionMultiDim *Clone() const { return new Wood4GradientFunction(); }
    double DoDerivative(const double *par, unsigned int ipar) const
    {
       const Double_t w = par[0];
@@ -76,17 +52,34 @@ double RosenBrock(const double *xx )
   return 100*tmp1*tmp1+tmp2*tmp2;
 }
 
-////"Newton-CG", "dogleg", "trust-ncg","trust-exact","trust-krylov"
-// methods failing for unkown reason "dogleg", "trust-ncg","trust-exact","trust-krylov"
+double RosenBrockGrad(const double *x, unsigned int ipar)
+{
+   if (ipar == 0)
+      return -2 * (1 - x[0]) + 200 * (x[1] - x[0] * x[0]) * (-2 * x[0]);
+   else
+      return 200 * (x[1] - x[0] * x[0]);
+}
+
+bool RosenBrockHessian(const std::vector<double> &xx, double *hess)
+{
+   const double x = xx[0];
+   const double y = xx[1];
+   
+   hess[0] = 1200*x*x - 400*y + 2;
+   hess[1] = -400*x;
+   hess[2] = -400*x;
+   hess[3] = 200;
+   
+   return true;
+}
+
+// methods that requires hessian to work "dogleg", "trust-ncg","trust-exact","trust-krylov"
 using namespace std;
 int scipy()
 { 
    
-   //std::string methods[]={"Nelder-Mead","L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr"};
-   std::string methods[]={"Nelder-Mead","L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG"};
-   // Choose method upon creation between:
-   RosenBrockGradientFunction rgf;
-   Wood4GradientFunction wgf;
+   std::string methods[]={"Nelder-Mead","L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG", "dogleg", "trust-ncg","trust-exact","trust-krylov"};
+   //Wood4GradientFunction wgf;
    for(const std::string &text : methods)
    {
    ROOT::Math::Experimental::ScipyMinimizer minimizer(text.c_str());
@@ -94,13 +87,14 @@ int scipy()
    minimizer.SetMaxIterations(100000);
    minimizer.SetTolerance(1e-3);
    minimizer.SetExtraOption("gtol",1e-3);
-   //ROOT::Math::Functor f(&RosenBrock,2); 
+   ROOT::Math::GradFunctor f(&RosenBrock,&RosenBrockGrad,2); 
    double step[2] = {0.01,0.01};
    double variable[2] = { -1.2,1.0};
  
-   //minimizer.SetFunction(f);
+   minimizer.SetFunction(f);
+   minimizer.SetHessianFunction(RosenBrockHessian);
    //minimizer.SetFunction(rgf);
-   minimizer.SetFunction(wgf);
+   //minimizer.SetFunction(wgf);
  
    // Set the free variables to be minimized!
    minimizer.SetVariable(0,"x",variable[0], step[0]);
