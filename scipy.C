@@ -3,44 +3,7 @@
 #include "Math/Functor.h"
 #include <string>
 #include "Math/MinimizerOptions.h"
-
-class Wood4GradientFunction : public ROOT::Math::IGradientFunctionMultiDim {
-public:
-   double DoEval(const double *par) const
-   {
-      const Double_t w = par[0];
-      const Double_t x = par[1];
-      const Double_t y = par[2];
-      const Double_t z = par[3];
-
-     const Double_t w1 = w-1;
-   const Double_t x1 = x-1;
-   const Double_t y1 = y-1;
-   const Double_t z1 = z-1;
-   const Double_t tmp1 = x-w*w;
-   const Double_t tmp2 = z-y*y;
-
-  return 100*tmp1*tmp1+w1*w1+90*tmp2*tmp2+y1*y1+10.1*(x1*x1+z1*z1)+19.8*x1*z1;
-   }
-   unsigned int NDim() const { return 4; }
-   ROOT::Math::IGradientFunctionMultiDim *Clone() const { return new Wood4GradientFunction(); }
-   double DoDerivative(const double *par, unsigned int ipar) const
-   {
-      const Double_t w = par[0];
-      const Double_t x = par[1];
-      const Double_t y = par[2];
-      const Double_t z = par[3];
-
-      if (ipar == 0)
-         return 400*(y-w*w)*w+2*(w-1);
-      if (ipar == 1)
-         return 20.2*(x-1)+19.8*(z-1);
-      if (ipar == 2)
-         return 200*(y-w*w)+360*(z-y*y)*y+2*(1-y);
-      if (ipar == 3)
-         return 180*(z-y*y)+20.2*(z-1)+19.8*(x-1);
-   }
-};
+#include "TStopwatch.h"
 
 
 double RosenBrock(const double *xx )
@@ -80,6 +43,7 @@ int scipy()
    
    std::string methods[]={"Nelder-Mead","L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG", "dogleg", "trust-ncg","trust-exact","trust-krylov"};
    //Wood4GradientFunction wgf;
+   TStopwatch t;
    for(const std::string &text : methods)
    {
    ROOT::Math::Experimental::ScipyMinimizer minimizer(text.c_str());
@@ -99,12 +63,14 @@ int scipy()
    // Set the free variables to be minimized!
    minimizer.SetVariable(0,"x",variable[0], step[0]);
    minimizer.SetVariable(1,"y",variable[1], step[1]);
- 
+   t.Reset();
+   t.Start();
    minimizer.Minimize(); 
- 
+   t.Stop();
    const double *xs = minimizer.X();
    cout << "Minimum: f(" << xs[0] << "," << xs[1] << "): " 
         << RosenBrock(xs) << endl;
+   cout << "Cpu Time (sec) = " << t.CpuTime() <<endl<< "Real Time (sec) = " << t.RealTime() << endl;
    cout << endl << "===============" << endl;
    }
    return 0;
