@@ -52,8 +52,7 @@ void fitLangaus(TH1 * h1, bool useBounds, bool fft = false,TString image="image.
       f1.SetParLimits(2,0,10);
       f1.SetParLimits(4,0,10);
    }
-
-   TString optFit = "L";
+   TString optFit = "L G";
    if (verbose == 1) optFit += " V";
    if (verbose == 2) optFit += " VV";
    h1->Fit(&f1,optFit);
@@ -72,8 +71,9 @@ void testLanGaus(const char * name="Minuit2", const char * name2="", bool useBou
    TStopwatch w;
    w.Start();
    ROOT::Math::MinimizerOptions::SetDefaultMinimizer(name, name2);
-   ROOT::Math::MinimizerOptions::SetDefaultStrategy(0);
-
+   ROOT::Math::MinimizerOptions::SetDefaultStrategy(0); //hessian is 2 https://root.cern.ch/root/htmldoc/guides/users-guide/FittingHistograms.html
+   ROOT::Math::MinimizerOptions::SetDefaultMaxIterations(100000);
+   ROOT::Math::MinimizerOptions::SetDefaultTolerance(1e-3);
    ROOT::Math::IntegratorOneDimOptions::SetDefaultIntegrator("Gauss");
    TString filename=name;
    filename+="_";
@@ -89,9 +89,9 @@ void testLanGaus(const char * name="Minuit2", const char * name2="", bool useBou
 using namespace std;
 int scipy_langauss()
 { 
-   
    std::string methods[]={"Nelder-Mead","L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG", "dogleg", "trust-ncg","trust-exact","trust-krylov"};
-   //std::string methods[]={"Nelder-Mead"};//,"L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG", "dogleg", "trust-ncg","trust-exact","trust-krylov"};
+   //std::string methods[]={"Nelder-Mead","L-BFGS-B","Powell","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG", "dogleg", "trust-ncg","trust-exact","trust-krylov"};
+   //std::string methods[]={"dogleg", "trust-ncg"};//,"L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG", "dogleg", "trust-ncg","trust-exact","trust-krylov"};
    //testLanGaus();
    //testLanGaus("Fumili");
    //TStopwatch t;

@@ -6,26 +6,26 @@ do fitting ...
 === Scipy Minimization
 === Method: Nelder-Mead
 === Initial value: (100,1,2,0,2)
+/usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:549: RuntimeWarning: Method Nelder-Mead does not use gradient information (jac).
+  warn('Method %s does not use gradient information (jac).' % method,
 /usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:554: RuntimeWarning: Method Nelder-Mead does not use Hessian information (hess).
   warn('Method %s does not use Hessian information (hess).' % method,
+=== Success: 1
 === Status: 0
 === Message: Optimization terminated successfully.
-=== Function calls: 369
-Warning in <Fit>: Abnormal termination of minimization.
-****************************************
-         Invalid FitResult  (status = -1 )
+=== Function calls: 405
 ****************************************
 Minimizer is Scipy / Nelder-Mead
 MinFCN                    =  1.16601e+07
 Chi2                      =  2.33201e+07
 NDf                       =          996
-NCalls                    =          369
+NCalls                    =          405
 p0                        =      5085.95
 p1                        =           -1 	 (limited)
 p2                        =           10 	 (limited)
-p3                        =     -1.38699                      	 (fixed)
+p3                        =     -1.38698                      	 (fixed)
 p4                        =           10 	 (limited)
-Info in <TCanvas::Print>: file Scipy_Nelder-Mead.png has been created
+Info in <TCanvas::Print>: png file Scipy_Nelder-Mead.png has been created
 Real time 0:00:03, CP time 5.320
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
@@ -35,52 +35,50 @@ do fitting ...
 === Initial value: (100,1,2,0,2)
 /usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:554: RuntimeWarning: Method L-BFGS-B does not use Hessian information (hess).
   warn('Method %s does not use Hessian information (hess).' % method,
+=== Success: 1
 === Status: 0
 === Message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
-=== Function calls: 12
-Warning in <Fit>: Abnormal termination of minimization.
-****************************************
-         Invalid FitResult  (status = -1 )
+=== Function calls: 45
 ****************************************
 Minimizer is Scipy / L-BFGS-B
-MinFCN                    =   6.0183e+07
-Chi2                      =  1.20366e+08
+MinFCN                    =      572.956
+Chi2                      =      1145.91
 NDf                       =          996
-NCalls                    =           12
-p0                        =      100.403
-p1                        =     0.999992 	 (limited)
-p2                        =      2.00003 	 (limited)
-p3                        =    -0.915152                      	 (fixed)
-p4                        =      2.00003 	 (limited)
-Info in <TCanvas::Print>: file Scipy_L-BFGS-B.png has been created
-Real time 0:00:00, CP time 0.630
+NCalls                    =           45
+p0                        =       399488
+p1                        =  -0.00173065 	 (limited)
+p2                        =      1.00074 	 (limited)
+p3                        =            0                      	 (fixed)
+p4                        =     0.997911 	 (limited)
+Info in <TCanvas::Print>: png file Scipy_L-BFGS-B.png has been created
+Real time 0:00:16, CP time 16.750
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
 === Scipy Minimization
 === Method: Powell
 === Initial value: (100,1,2,0,2)
+/usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:549: RuntimeWarning: Method Powell does not use gradient information (jac).
+  warn('Method %s does not use gradient information (jac).' % method,
 /usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:554: RuntimeWarning: Method Powell does not use Hessian information (hess).
   warn('Method %s does not use Hessian information (hess).' % method,
+=== Success: 1
 === Status: 0
 === Message: Optimization terminated successfully.
-=== Function calls: 609
-Warning in <Fit>: Abnormal termination of minimization.
-****************************************
-         Invalid FitResult  (status = -1 )
+=== Function calls: 747
 ****************************************
 Minimizer is Scipy / Powell
-MinFCN                    =      2258.74
-Chi2                      =      4517.48
+MinFCN                    =      1776.31
+Chi2                      =      3552.62
 NDf                       =          996
-NCalls                    =          609
-p0                        =       396309
-p1                        =      1.35876 	 (limited)
-p2                        =     0.998581 	 (limited)
-p3                        =     -1.35689                      	 (fixed)
-p4                        =      1.00774 	 (limited)
-Info in <TCanvas::Print>: file Scipy_Powell.png has been created
-Real time 0:00:16, CP time 16.380
+NCalls                    =          747
+p0                        =       397905
+p1                        =      1.15846 	 (limited)
+p2                        =     0.999031 	 (limited)
+p3                        =     -1.15773                      	 (fixed)
+p4                        =      1.00361 	 (limited)
+Info in <TCanvas::Print>: png file Scipy_Powell.png has been created
+Real time 0:00:20, CP time 20.340
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
@@ -91,25 +89,26 @@ do fitting ...
   warn('Method %s does not use Hessian information (hess).' % method,
 /usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:569: RuntimeWarning: Method CG cannot handle bounds.
   warn('Method %s cannot handle bounds.' % method,
-=== Status: 0
+=== Success: 0
+=== Status: 2
 === Message: Desired error not necessarily achieved due to precision loss.
-=== Function calls: 3654
+=== Function calls: 1450
 Warning in <Fit>: Abnormal termination of minimization.
 ****************************************
          Invalid FitResult  (status = -1 )
 ****************************************
 Minimizer is Scipy / CG
-MinFCN                    =  1.06764e+07
-Chi2                      =  2.13528e+07
+MinFCN                    =      1341.07
+Chi2                      =      2682.13
 NDf                       =          996
-NCalls                    =         3654
-p0                        =      5958.95
-p1                        =      -2077.3 	 (limited)
-p2                        =      2731.41 	 (limited)
-p3                        =      -63.492                      	 (fixed)
-p4                        =      11.7438 	 (limited)
-Info in <TCanvas::Print>: file Scipy_CG.png has been created
-Real time 0:00:16, CP time 16.160
+NCalls                    =         1450
+p0                        =       384373
+p1                        =    0.0125526 	 (limited)
+p2                        =     0.996679 	 (limited)
+p3                        =            0                      	 (fixed)
+p4                        =      1.03706 	 (limited)
+Info in <TCanvas::Print>: png file Scipy_CG.png has been created
+Real time 0:09:46, CP time 586.250
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
@@ -120,25 +119,23 @@ do fitting ...
   warn('Method %s does not use Hessian information (hess).' % method,
 /usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:569: RuntimeWarning: Method BFGS cannot handle bounds.
   warn('Method %s cannot handle bounds.' % method,
+=== Success: 1
 === Status: 0
-=== Message: Desired error not necessarily achieved due to precision loss.
-=== Function calls: 1644
-Warning in <Fit>: Abnormal termination of minimization.
-****************************************
-         Invalid FitResult  (status = -1 )
+=== Message: Optimization terminated successfully.
+=== Function calls: 77
 ****************************************
 Minimizer is Scipy / BFGS
-MinFCN                    =      470.522
-Chi2                      =      941.044
+MinFCN                    =      572.955
+Chi2                      =      1145.91
 NDf                       =          996
-NCalls                    =         1644
-p0                        =       381853
-p1                        =     -17.9597 	 (limited)
-p2                        =     0.991141 	 (limited)
-p3                        =      17.9069                      	 (fixed)
-p4                        =      1.06662 	 (limited)
-Info in <TCanvas::Print>: file Scipy_BFGS.png has been created
-Real time 0:00:22, CP time 21.890
+NCalls                    =           77
+p0                        =       399492
+p1                        =  -0.00173343 	 (limited)
+p2                        =      1.00075 	 (limited)
+p3                        =            0                      	 (fixed)
+p4                        =       0.9979 	 (limited)
+Info in <TCanvas::Print>: png file Scipy_BFGS.png has been created
+Real time 0:00:23, CP time 23.600
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
@@ -147,54 +144,55 @@ do fitting ...
 === Initial value: (100,1,2,0,2)
 /usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:554: RuntimeWarning: Method TNC does not use Hessian information (hess).
   warn('Method %s does not use Hessian information (hess).' % method,
-=== Status: 0
-=== Message: Max. number of function evaluations reached
-=== Function calls: 606
-Warning in <Fit>: Abnormal termination of minimization.
-****************************************
-         Invalid FitResult  (status = -1 )
+=== Success: 1
+=== Status: 2
+=== Message: Converged (|x_n-x_(n-1)| ~= 0)
+=== Function calls: 73
 ****************************************
 Minimizer is Scipy / TNC
-MinFCN                    =  6.37888e+06
-Chi2                      =  1.27578e+07
+MinFCN                    =   3.2709e+06
+Chi2                      =   6.5418e+06
 NDf                       =          996
-NCalls                    =          606
-p0                        =      16215.9
-p1                        =      8.59851 	 (limited)
-p2                        =       3.4762 	 (limited)
-p3                        =     -8.45309                      	 (fixed)
-p4                        =      5.07837 	 (limited)
-Info in <TCanvas::Print>: file Scipy_TNC.png has been created
-Real time 0:00:09, CP time 9.130
+NCalls                    =           73
+p0                        =      43027.6
+p1                        =     0.499968 	 (limited)
+p2                        =      2.00236 	 (limited)
+p3                        =            0                      	 (fixed)
+p4                        =      3.39107 	 (limited)
+Info in <TCanvas::Print>: png file Scipy_TNC.png has been created
+Real time 0:00:20, CP time 20.610
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
 === Scipy Minimization
 === Method: COBYLA
 === Initial value: (100,1,2,0,2)
+/usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:549: RuntimeWarning: Method COBYLA does not use gradient information (jac).
+  warn('Method %s does not use gradient information (jac).' % method,
 /usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:554: RuntimeWarning: Method COBYLA does not use Hessian information (hess).
   warn('Method %s does not use Hessian information (hess).' % method,
 /usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:569: RuntimeWarning: Method COBYLA cannot handle bounds.
   warn('Method %s cannot handle bounds.' % method,
-=== Status: 0
+=== Success: 0
+=== Status: 2
 === Message: Maximum number of function evaluations has been exceeded.
-=== Function calls: 1000
+=== Function calls: 100000
 Warning in <Fit>: Abnormal termination of minimization.
 ****************************************
          Invalid FitResult  (status = -1 )
 ****************************************
 Minimizer is Scipy / COBYLA
-MinFCN                    =  1.42688e+07
-Chi2                      =  2.85376e+07
+MinFCN                    =  1.09815e+07
+Chi2                      =  2.19629e+07
 NDf                       =          996
-NCalls                    =         1000
-p0                        =      827.412
-p1                        =      62.4252 	 (limited)
-p2                        =      138.296 	 (limited)
-p3                        =     -51.9542                      	 (fixed)
-p4                        =      37.1072 	 (limited)
-Info in <TCanvas::Print>: file Scipy_COBYLA.png has been created
-Real time 0:00:01, CP time 1.120
+NCalls                    =       100000
+p0                        =      2937.02
+p1                        =      74.3471 	 (limited)
+p2                        =      31.4224 	 (limited)
+p3                        =      -60.947                      	 (fixed)
+p4                        =      16.6438 	 (limited)
+Info in <TCanvas::Print>: png file Scipy_COBYLA.png has been created
+Real time 0:04:41, CP time 281.600
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
@@ -203,52 +201,49 @@ do fitting ...
 === Initial value: (100,1,2,0,2)
 /usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:554: RuntimeWarning: Method SLSQP does not use Hessian information (hess).
   warn('Method %s does not use Hessian information (hess).' % method,
-/usr/lib/python3/dist-packages/scipy/optimize/_optimize.py:353: RuntimeWarning: Values in x were outside bounds during a minimize step, clipping to bounds
-  warnings.warn("Values in x were outside bounds during a "
+=== Success: 1
 === Status: 0
 === Message: Optimization terminated successfully
-=== Function calls: 186
-Warning in <Fit>: Abnormal termination of minimization.
-****************************************
-         Invalid FitResult  (status = -1 )
+=== Function calls: 46
 ****************************************
 Minimizer is Scipy / SLSQP
-MinFCN                    =  7.09199e+09
-Chi2                      =   1.4184e+10
+MinFCN                    =  9.69594e+06
+Chi2                      =  1.93919e+07
 NDf                       =          996
-NCalls                    =          186
-p0                        =     -23.8461
-p1                        =     0.994546 	 (limited)
-p2                        =      1.98211 	 (limited)
-p3                        =     -94714.3                      	 (fixed)
-p4                        =      1.98211 	 (limited)
-Info in <TCanvas::Print>: file Scipy_SLSQP.png has been created
-Real time 0:00:02, CP time 2.260
+NCalls                    =           46
+p0                        =      9616.27
+p1                        =      1.65021 	 (limited)
+p2                        =       7.1963 	 (limited)
+p3                        =            0                      	 (fixed)
+p4                        =      6.74317 	 (limited)
+Info in <TCanvas::Print>: png file Scipy_SLSQP.png has been created
+Real time 0:00:03, CP time 3.120
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
 === Scipy Minimization
 === Method: trust-constr
 === Initial value: (100,1,2,0,2)
+=== Success: 0
 === Status: 0
 === Message: The maximum number of function evaluations is exceeded.
-=== Function calls: 7
+=== Function calls: 3
 Warning in <Fit>: Abnormal termination of minimization.
 ****************************************
          Invalid FitResult  (status = -1 )
 ****************************************
 Minimizer is Scipy / trust-constr
-MinFCN                    =  6.01934e+07
-Chi2                      =  1.20387e+08
+MinFCN                    =  5.70828e+07
+Chi2                      =  1.14166e+08
 NDf                       =          996
-NCalls                    =            7
-p0                        =          100
-p1                        =            1 	 (limited)
-p2                        =            2 	 (limited)
-p3                        =            0                      	 (fixed)
-p4                        =            2 	 (limited)
-Info in <TCanvas::Print>: file Scipy_trust-constr.png has been created
-Real time 0:00:01, CP time 1.100
+NCalls                    =            3
+p0                        =      100.012
+p1                        =      1.05313 	 (limited)
+p2                        =      2.42405 	 (limited)
+p3                        = 2.06323e-193                      	 (fixed)
+p4                        =      2.51876 	 (limited)
+Info in <TCanvas::Print>: png file Scipy_trust-constr.png has been created
+Real time 0:00:42, CP time 42.970
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
@@ -257,28 +252,23 @@ do fitting ...
 === Initial value: (100,1,2,0,2)
 /usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:569: RuntimeWarning: Method Newton-CG cannot handle bounds.
   warn('Method %s cannot handle bounds.' % method,
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/scipy/optimize/_minimize.py", line 693, in minimize
-    res = _minimize_newtoncg(fun, x0, args, jac, hess, hessp, callback,
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/scipy/optimize/_optimize.py", line 1930, in _minimize_newtoncg
-    raise ValueError('Jacobian is required for Newton-CG method')
-ValueError: Jacobian is required for Newton-CG method
-Warning in <Fit>: Abnormal termination of minimization.
-****************************************
-         Invalid FitResult  (status = -1 )
+=== Success: 1
+=== Status: 0
+=== Message: Optimization terminated successfully.
+=== Function calls: 1
 ****************************************
 Minimizer is Scipy / Newton-CG
-Chi2                      =            0
+MinFCN                    =  6.01934e+07
+Chi2                      =  1.20387e+08
 NDf                       =          996
-NCalls                    =            0
+NCalls                    =            1
 p0                        =          100
 p1                        =            1 	 (limited)
 p2                        =            2 	 (limited)
 p3                        =            0                      	 (fixed)
 p4                        =            2 	 (limited)
-Info in <TCanvas::Print>: file Scipy_Newton-CG.png has been created
-Real time 0:00:00, CP time 0.450
+Info in <TCanvas::Print>: png file Scipy_Newton-CG.png has been created
+Real time 0:00:00, CP time 0.720
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
@@ -287,28 +277,26 @@ do fitting ...
 === Initial value: (100,1,2,0,2)
 /usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:569: RuntimeWarning: Method dogleg cannot handle bounds.
   warn('Method %s cannot handle bounds.' % method,
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/scipy/optimize/_minimize.py", line 712, in minimize
-    res = _minimize_dogleg(fun, x0, args, jac, hess,
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/scipy/optimize/_trustregion_dogleg.py", line 30, in _minimize_dogleg
-    raise ValueError('Jacobian is required for dogleg minimization')
-ValueError: Jacobian is required for dogleg minimization
+=== Success: 0
+=== Status: 3
+=== Message: A linalg error occurred, such as a non-psd Hessian.
+=== Function calls: 1
 Warning in <Fit>: Abnormal termination of minimization.
 ****************************************
          Invalid FitResult  (status = -1 )
 ****************************************
 Minimizer is Scipy / dogleg
-Chi2                      =            0
+MinFCN                    =  6.01934e+07
+Chi2                      =  1.20387e+08
 NDf                       =          996
-NCalls                    =            0
+NCalls                    =            1
 p0                        =          100
 p1                        =            1 	 (limited)
 p2                        =            2 	 (limited)
 p3                        =            0                      	 (fixed)
 p4                        =            2 	 (limited)
-Info in <TCanvas::Print>: file Scipy_dogleg.png has been created
-Real time 0:00:00, CP time 0.400
+Info in <TCanvas::Print>: png file Scipy_dogleg.png has been created
+Real time 0:00:00, CP time 0.720
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
@@ -321,9 +309,21 @@ Traceback (most recent call last):
   File "/usr/lib/python3/dist-packages/scipy/optimize/_minimize.py", line 715, in minimize
     res = _minimize_trust_ncg(fun, x0, args, jac, hess, hessp,
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/scipy/optimize/_trustregion_ncg.py", line 32, in _minimize_trust_ncg
-    raise ValueError('Jacobian is required for Newton-CG trust-region '
-ValueError: Jacobian is required for Newton-CG trust-region minimization
+  File "/usr/lib/python3/dist-packages/scipy/optimize/_trustregion_ncg.py", line 37, in _minimize_trust_ncg
+    return _minimize_trust_region(fun, x0, args=args, jac=jac, hess=hess,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/scipy/optimize/_trustregion.py", line 224, in _minimize_trust_region
+    p, hits_boundary = m.solve(trust_radius)
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/scipy/optimize/_trustregion_ncg.py", line 108, in solve
+    if scipy.linalg.norm(z_next) >= trust_radius:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/scipy/linalg/_misc.py", line 146, in norm
+    a = np.asarray_chkfinite(a)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/numpy/lib/function_base.py", line 628, in asarray_chkfinite
+    raise ValueError(
+ValueError: array must not contain infs or NaNs
 Warning in <Fit>: Abnormal termination of minimization.
 ****************************************
          Invalid FitResult  (status = -1 )
@@ -337,8 +337,8 @@ p1                        =            1 	 (limited)
 p2                        =            2 	 (limited)
 p3                        =            0                      	 (fixed)
 p4                        =            2 	 (limited)
-Info in <TCanvas::Print>: file Scipy_trust-ncg.png has been created
-Real time 0:00:00, CP time 0.410
+Info in <TCanvas::Print>: png file Scipy_trust-ncg.png has been created
+Real time 0:00:01, CP time 1.060
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
@@ -351,9 +351,21 @@ Traceback (most recent call last):
   File "/usr/lib/python3/dist-packages/scipy/optimize/_minimize.py", line 721, in minimize
     res = _minimize_trustregion_exact(fun, x0, args, jac, hess,
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/scipy/optimize/_trustregion_exact.py", line 34, in _minimize_trustregion_exact
-    raise ValueError('Jacobian is required for trust region '
-ValueError: Jacobian is required for trust region exact minimization.
+  File "/usr/lib/python3/dist-packages/scipy/optimize/_trustregion_exact.py", line 39, in _minimize_trustregion_exact
+    return _minimize_trust_region(fun, x0, args=args, jac=jac, hess=hess,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/scipy/optimize/_trustregion.py", line 234, in _minimize_trust_region
+    m_proposed = subproblem(x_proposed, fun, jac, hess, hessp)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/scipy/optimize/_trustregion_exact.py", line 245, in __init__
+    self.hess_inf = norm(self.hess, np.Inf)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/scipy/linalg/_misc.py", line 146, in norm
+    a = np.asarray_chkfinite(a)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/numpy/lib/function_base.py", line 628, in asarray_chkfinite
+    raise ValueError(
+ValueError: array must not contain infs or NaNs
 Warning in <Fit>: Abnormal termination of minimization.
 ****************************************
          Invalid FitResult  (status = -1 )
@@ -367,8 +379,8 @@ p1                        =            1 	 (limited)
 p2                        =            2 	 (limited)
 p3                        =            0                      	 (fixed)
 p4                        =            2 	 (limited)
-Info in <TCanvas::Print>: file Scipy_trust-exact.png has been created
-Real time 0:00:00, CP time 0.410
+Info in <TCanvas::Print>: png file Scipy_trust-exact.png has been created
+Real time 0:00:00, CP time 0.720
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
@@ -377,26 +389,24 @@ do fitting ...
 === Initial value: (100,1,2,0,2)
 /usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:569: RuntimeWarning: Method trust-krylov cannot handle bounds.
   warn('Method %s cannot handle bounds.' % method,
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/scipy/optimize/_minimize.py", line 718, in minimize
-    res = _minimize_trust_krylov(fun, x0, args, jac, hess, hessp,
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/scipy/optimize/_trustregion_krylov.py", line 23, in _minimize_trust_krylov
-    raise ValueError('Jacobian is required for trust region ',
-ValueError: ('Jacobian is required for trust region ', 'exact minimization.')
+=== Success: 0
+=== Status: 2
+=== Message: A bad approximation caused failure to predict improvement.
+=== Function calls: 1
 Warning in <Fit>: Abnormal termination of minimization.
 ****************************************
          Invalid FitResult  (status = -1 )
 ****************************************
 Minimizer is Scipy / trust-krylov
-Chi2                      =            0
+MinFCN                    =  6.01934e+07
+Chi2                      =  1.20387e+08
 NDf                       =          996
-NCalls                    =            0
+NCalls                    =            1
 p0                        =          100
 p1                        =            1 	 (limited)
 p2                        =            2 	 (limited)
 p3                        =            0                      	 (fixed)
 p4                        =            2 	 (limited)
-Info in <TCanvas::Print>: file Scipy_trust-krylov.png has been created
-Real time 0:00:00, CP time 0.420
+Info in <TCanvas::Print>: png file Scipy_trust-krylov.png has been created
+Real time 0:00:00, CP time 0.720
 (int) 0
