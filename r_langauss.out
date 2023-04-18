@@ -1,0 +1,135 @@
+
+Processing r_langauss.C...
+Info in <TCanvas::MakeDefCanvas>:  created default TCanvas with name c1
+0.25
+do fitting ...
+Calling R with command result <- optimx( initialparams, minfunction,mingradfunction, method='Nelder-Mead', control = list(ndeps=stepsizes,maxit=1000,trace=0,abstol=1.000000e-02,starttests=FALSE),hessian=TRUE)
+Value at minimum =1.0664e+07
+****************************************
+Minimizer is RMinimizer / Nelder-Mead
+MinFCN                    =   1.0664e+07
+Chi2                      =  2.13279e+07
+NDf                       =          996
+NCalls                    =         1002
+p0                        =      5669.05   +/-   4.37631     
+p1                        =      1139.42   +/-   5.66187      	 (limited)
+p2                        =      1130.01   +/-   4.9437       	 (limited)
+p3                        =     -62.9551                      	 (fixed)
+p4                        =      11.7544   +/-   0.00450202   	 (limited)
+Info in <TCanvas::Print>: png file RMinimizer_Nelder-Mead.png has been created
+Real time 0:00:05, CP time 5.630
+Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
+0.25
+do fitting ...
+Calling R with command result <- optimx( initialparams, minfunction,mingradfunction, method='BFGS', control = list(ndeps=stepsizes,maxit=1000,trace=0,abstol=1.000000e-02,starttests=FALSE),hessian=TRUE)
+Value at minimum =1.75776e+07
+****************************************
+Minimizer is RMinimizer / BFGS
+MinFCN                    =  1.75776e+07
+Chi2                      =  3.51552e+07
+NDf                       =          996
+NCalls                    =           20
+p0                        =      555.457   +/-   0.676675    
+p1                        =     -1798.75   +/-   276.058      	 (limited)
+p2                        =        26673   +/-   146.377      	 (limited)
+p3                        =            0                      	 (fixed)
+p4                        =      33876.7   +/-   1185.29      	 (limited)
+Info in <TCanvas::Print>: png file RMinimizer_BFGS.png has been created
+Real time 0:00:00, CP time 1.000
+Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
+0.25
+do fitting ...
+Calling R with command result <- optimx( initialparams, minfunction,mingradfunction, method='CG', control = list(ndeps=stepsizes,maxit=1000,trace=0,abstol=1.000000e-02,starttests=FALSE),hessian=TRUE)
+Value at minimum =1.75776e+07
+****************************************
+Minimizer is RMinimizer / CG
+MinFCN                    =  1.75776e+07
+Chi2                      =  3.51552e+07
+NDf                       =          996
+NCalls                    =          134
+p0                        =      555.524   +/-   0.468924    
+p1                        =     -898.623   +/-   111.054      	 (limited)
+p2                        =      13335.5   +/-   208.869      	 (limited)
+p3                        =            0                      	 (fixed)
+p4                        =      16936.8   +/-   48.4061      	 (limited)
+Info in <TCanvas::Print>: png file RMinimizer_CG.png has been created
+Real time 0:00:01, CP time 1.320
+Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
+0.25
+do fitting ...
+Calling R with command result <- optimx( initialparams, minfunction,mingradfunction, method='L-BFGS-B', control = list(ndeps=stepsizes,maxit=1000,trace=0,abstol=1.000000e-02,starttests=FALSE),hessian=TRUE)
+Value at minimum =572.955
+****************************************
+Minimizer is RMinimizer / L-BFGS-B
+MinFCN                    =      572.955
+Chi2                      =      1145.91
+NDf                       =          996
+NCalls                    =          116
+p0                        =       399492   +/-   400.581     
+p1                        =  -0.00173395   +/-   0.000394917  	 (limited)
+p2                        =      1.00075   +/-   0.000651029  	 (limited)
+p3                        =            0                      	 (fixed)
+p4                        =       0.9979   +/-   0.00125085   	 (limited)
+Info in <TCanvas::Print>: png file RMinimizer_L-BFGS-B.png has been created
+Real time 0:00:42, CP time 43.350
+Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
+0.25
+do fitting ...
+Calling R with command result <- optimx( initialparams, minfunction,mingradfunction, method='SANN', control = list(ndeps=stepsizes,maxit=1000,trace=0,abstol=1.000000e-02,starttests=FALSE),hessian=TRUE)
+Error in if (!(cmeth %in% allmeth)) { : argument is of length zero
+In addition: Warning messages:
+1: In optimx.run(par, optcfg$ufn, optcfg$ugr, optcfg$uhess, lower,  :
+  Hessian is reported non-symmetric with asymmetry ratio 0.357065115872385
+2: Hessian forced symmetric 
+3: In optimx.run(par, optcfg$ufn, optcfg$ugr, optcfg$uhess, lower,  :
+  Hessian is reported non-symmetric with asymmetry ratio 0.00305244401345107
+4: Hessian forced symmetric 
+5: In optimx.run(par, optcfg$ufn, optcfg$ugr, optcfg$uhess, lower,  :
+  Hessian is reported non-symmetric with asymmetry ratio 0.00101642234648165
+6: Hessian forced symmetric 
+7: In optim(par = par, fn = ufn, gr = ugr, method = meth, control = mcontrol,  :
+  method L-BFGS-B uses 'factr' (and 'pgtol') instead of 'reltol' and 'abstol'
+8: In optimx.run(par, optcfg$ufn, optcfg$ugr, optcfg$uhess, lower,  :
+  Hessian is reported non-symmetric with asymmetry ratio 0.119095360715754
+9: Hessian forced symmetric 
+10: In optimx.setup(par, fn, gr, hess, lower, upper, method, itnmax,  :
+  optimx: No match to available methods
+Error in <ROOT::R::TRInterface::Execute>: Can execute the requested code: result <- optimx( initialparams, minfunction,mingradfunction, method='SANN', control = list(ndeps=stepsizes,maxit=1000,trace=0,abstol=1.000000e-02,starttests=FALSE),hessian=TRUE)
+Value at minimum =572.955
+****************************************
+Minimizer is RMinimizer / SANN
+MinFCN                    =      572.955
+Chi2                      =      1145.91
+NDf                       =          996
+NCalls                    =            0
+p0                        =       399492   +/-   400.581     
+p1                        =  -0.00173395   +/-   0.000394917  	 (limited)
+p2                        =      1.00075   +/-   0.000651029  	 (limited)
+p3                        =            0                      	 (fixed)
+p4                        =       0.9979   +/-   0.00125085   	 (limited)
+Info in <TCanvas::Print>: png file RMinimizer_SANN.png has been created
+Real time 0:00:00, CP time 1.040
+Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
+0.25
+do fitting ...
+Calling R with command result <- optimx( initialparams, minfunction,mingradfunction, method='Brent', control = list(ndeps=stepsizes,maxit=1000,trace=0,abstol=1.000000e-02,starttests=FALSE),hessian=TRUE)
+Error in if (!(cmeth %in% allmeth)) { : argument is of length zero
+In addition: Warning message:
+In optimx.setup(par, fn, gr, hess, lower, upper, method, itnmax,  :
+  optimx: No match to available methods
+Error in <ROOT::R::TRInterface::Execute>: Can execute the requested code: result <- optimx( initialparams, minfunction,mingradfunction, method='Brent', control = list(ndeps=stepsizes,maxit=1000,trace=0,abstol=1.000000e-02,starttests=FALSE),hessian=TRUE)
+Value at minimum =572.955
+****************************************
+Minimizer is RMinimizer / Brent
+MinFCN                    =      572.955
+Chi2                      =      1145.91
+NDf                       =          996
+NCalls                    =            0
+p0                        =       399492   +/-   400.581     
+p1                        =  -0.00173395   +/-   0.000394917  	 (limited)
+p2                        =      1.00075   +/-   0.000651029  	 (limited)
+p3                        =            0                      	 (fixed)
+p4                        =       0.9979   +/-   0.00125085   	 (limited)
+Info in <TCanvas::Print>: png file RMinimizer_Brent.png has been created
+Real time 0:00:00, CP time 1.090
+(int) 0
