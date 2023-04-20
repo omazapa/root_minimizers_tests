@@ -1,0 +1,47 @@
+
+Processing scipy_const.C...
+[{'type': 'ineq', 'fun': <built-in function const_function0>}]=== Scipy Minimization
+=== Method: COBYLA
+=== Initial value: (-1.2,1)
+/usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:549: RuntimeWarning: Method COBYLA does not use gradient information (jac).
+  warn('Method %s does not use gradient information (jac).' % method,
+/usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:554: RuntimeWarning: Method COBYLA does not use Hessian information (hess).
+  warn('Method %s does not use Hessian information (hess).' % method,
+/usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:569: RuntimeWarning: Method COBYLA cannot handle bounds.
+  warn('Method %s cannot handle bounds.' % method,
+=== Success: 1
+=== Status: 1
+=== Message: Optimization terminated successfully.
+=== Function calls: 867
+Minimum: f(0.734408,0.540742): 0.0707316
+Cpu Time (sec) = 0
+Real Time (sec) = 0.00165486
+
+===============
+[{'type': 'ineq', 'fun': <built-in function const_function0>}]=== Scipy Minimization
+=== Method: SLSQP
+=== Initial value: (-1.2,1)
+/usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:554: RuntimeWarning: Method SLSQP does not use Hessian information (hess).
+  warn('Method %s does not use Hessian information (hess).' % method,
+=== Success: 1
+=== Status: 0
+=== Message: Optimization terminated successfully
+=== Function calls: 40
+Minimum: f(0.995773,0.990973): 5.26826e-05
+Cpu Time (sec) = 0
+Real Time (sec) = 0.00267291
+
+===============
+[{'type': 'ineq', 'fun': <built-in function const_function0>}]=== Scipy Minimization
+=== Method: trust-constr
+=== Initial value: (-1.2,1)
+=== Success: 1
+=== Status: 1
+=== Message: `gtol` termination condition is satisfied.
+=== Function calls: 55
+Minimum: f(0.997722,0.995431): 5.22046e-06
+Cpu Time (sec) = 0.03
+Real Time (sec) = 0.032434
+
+===============
+(int) 0

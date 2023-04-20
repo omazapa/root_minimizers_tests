@@ -37,11 +37,6 @@ bool RosenBrockHessian(const std::vector<double> &xx, double *hess)
    return true;
 }
 
-double ConstRosenBrock(const std::vector<double> &x )
-{
-  return 0;
-}
-
 
 // methods that requires hessian to work "dogleg", "trust-ncg","trust-exact","trust-krylov"
 using namespace std;
@@ -74,7 +69,6 @@ int scipy()
       //minimizer.SetVariableLimits(0, -2.0, 2.0);
       //minimizer.SetVariableLowerLimit(0, -10); //BUG WITH THIS
       minimizer.SetVariableLimits(1, -2.0, 2.0);
-      minimizer.AddConstraintFunction(ConstRosenBrock,"eq"); 
       //ROOT::Fit::ParameterSettings varsettings;
       //minimizer.GetVariableSettings(0, varsettings);
       //std::cout<<"HAS LOWER LIMMIT ="<<varsettings.HasLowerLimit()<<std::endl;      
