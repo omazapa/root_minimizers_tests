@@ -91,7 +91,7 @@ using namespace std;
 int r_langauss()
 { 
    
-   std::string methods[]={"Nelder-Mead", "BFGS", "CG", "L-BFGS-B", "SANN", "Brent"};
+   std::string methods[]={"Nelder-Mead", "BFGS", "CG", "L-BFGS-B", "SANN"};//, "Brent"}; brent is only 1D
    //testLanGaus();
    //testLanGaus("Fumili");
    //TStopwatch t;

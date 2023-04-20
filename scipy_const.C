@@ -36,20 +36,19 @@ bool RosenBrockHessian(const std::vector<double> &xx, double *hess)
    
    return true;
 }
+//https://de.mathworks.com/help/optim/ug/example-nonlinear-constrained-minimization.html
 
 double ConstRosenBrock(const std::vector<double> &x )
 {
-  return 0;
+  return x[0]*x[0]-x[1]*x[1]+1;
 }
 
 
 // methods that requires hessian to work "dogleg", "trust-ncg","trust-exact","trust-krylov"
 using namespace std;
-int scipy()
+int scipy_const()
 { 
-   
-   std::string methods[]={"Nelder-Mead","L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG", "dogleg", "trust-ncg","trust-exact","trust-krylov"};
-   //Wood4GradientFunction wgf;
+   std::string methods[]={"COBYLA","SLSQP","trust-constr"};
    TStopwatch t;
    for(const std::string &text : methods)
    {
@@ -74,7 +73,7 @@ int scipy()
       //minimizer.SetVariableLimits(0, -2.0, 2.0);
       //minimizer.SetVariableLowerLimit(0, -10); //BUG WITH THIS
       minimizer.SetVariableLimits(1, -2.0, 2.0);
-      minimizer.AddConstraintFunction(ConstRosenBrock,"eq"); 
+      minimizer.AddConstraintFunction(ConstRosenBrock,"ineq"); 
       //ROOT::Fit::ParameterSettings varsettings;
       //minimizer.GetVariableSettings(0, varsettings);
       //std::cout<<"HAS LOWER LIMMIT ="<<varsettings.HasLowerLimit()<<std::endl;      
@@ -95,5 +94,5 @@ int scipy()
 
 int main()
 {
-  return scipy();
+  return scipy_const();
 }
