@@ -72,7 +72,7 @@ void testLanGaus(const char * name="Minuit2", const char * name2="", bool useBou
    w.Start();
    ROOT::Math::MinimizerOptions::SetDefaultMinimizer(name, name2);
    ROOT::Math::MinimizerOptions::SetDefaultStrategy(0); //hessian is 2 https://root.cern.ch/root/htmldoc/guides/users-guide/FittingHistograms.html
-   ROOT::Math::MinimizerOptions::SetDefaultMaxIterations(3000);
+   ROOT::Math::MinimizerOptions::SetDefaultMaxIterations(10000);
    ROOT::Math::MinimizerOptions::SetDefaultTolerance(1e-3);
    ROOT::Math::IntegratorOneDimOptions::SetDefaultIntegrator("Gauss");
    TString filename=name;

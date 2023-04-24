@@ -21,32 +21,32 @@ Total number of inequality constraints...............:        0
         inequality constraints with only upper bounds:        0
 
 
-Number of Iterations....: 3000
+Number of Iterations....: 66
 
                                    (scaled)                 (unscaled)
-Objective...............:   1.3533184419891552e-02    5.7295549340202604e+02
-Dual infeasibility......:   2.9171904556603712e-07    1.2350532180835845e-02
+Objective...............:   1.3533184419920342e-02    5.7295549340324487e+02
+Dual infeasibility......:   1.1444997706590344e-06    4.8454776824929095e-02
 Constraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
 Variable bound violation:   0.0000000000000000e+00    0.0000000000000000e+00
-Complementarity.........:   1.0000000021221775e-11    4.2337078756998912e-07
-Overall NLP error.......:   2.9171904556603712e-07    1.2350532180835845e-02
+Complementarity.........:   2.2216159865114499e-11    9.4056730789138003e-07
+Overall NLP error.......:   1.1444997706590344e-06    4.8454776824929095e-02
 
 
-Number of objective function evaluations             = 94064
-Number of objective gradient evaluations             = 3001
+Number of objective function evaluations             = 512
+Number of objective gradient evaluations             = 67
 Number of equality constraint evaluations            = 0
 Number of inequality constraint evaluations          = 0
 Number of equality constraint Jacobian evaluations   = 0
 Number of inequality constraint Jacobian evaluations = 0
 Number of Lagrangian Hessian evaluations             = 0
-Total seconds in IPOPT                               = 3912.197
+Total seconds in IPOPT                               = 36.668
 
-EXIT: Maximum Number of Iterations Exceeded.
+EXIT: Optimal Solution Found.
 
 
 Solution of the primal variables, x
 x[0] = 399492
-x[1] = -0.00173342
+x[1] = -0.0017334
 x[2] = 1.00075
 x[3] = 0
 x[4] = 0.9979
@@ -54,39 +54,42 @@ x[4] = 0.9979
 
 Solution of the bound multipliers, z_L and z_U
 z_L[0] = 0
-z_L[1] = 4.24106e-07
-z_L[2] = 4.23055e-07
+z_L[1] = 5.60256e-07
+z_L[2] = 5.33461e-07
 z_L[3] = 0
-z_L[4] = 4.24262e-07
+z_L[4] = 9.42547e-07
 z_U[0] = 0
-z_U[1] = 4.23297e-08
-z_U[2] = 4.70451e-08
+z_U[1] = 5.64349e-08
+z_U[2] = 6.36846e-08
 z_U[3] = 0
-z_U[4] = 4.70302e-08
+z_U[4] = 6.20106e-08
 
 
 Objective value
 f(x*) = 572.955
 
 Final value of the constraints:
-Warning in <Fit>: Abnormal termination of minimization.
 
-****************************************
-         Invalid FitResult  (status = -1 )
+
+*** The problem solved in 66 iterations!
+
+
+*** The final value of the objective function is 572.955.
+
 ****************************************
 Minimizer is Ipopt / mumps
 MinFCN                    =      572.955
 Chi2                      =      1064.97
 NDf                       =          996
 Edm                       =            0
-NCalls                    =        94064
+NCalls                    =          512
 p0                        =       399492
-p1                        =  -0.00173342 	 (limited)
+p1                        =   -0.0017334 	 (limited)
 p2                        =      1.00075 	 (limited)
 p3                        =            0                      	 (fixed)
 p4                        =       0.9979 	 (limited)
 Info in <TCanvas::Print>: file Ipopt_mumps.png has been created
-Real time 1:05:13, CP time 3915.200
+Real time 0:00:37, CP time 39.690
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
@@ -120,7 +123,7 @@ Number of inequality constraint evaluations          = 0
 Number of equality constraint Jacobian evaluations   = 0
 Number of inequality constraint Jacobian evaluations = 0
 Number of Lagrangian Hessian evaluations             = 0
-Total seconds in IPOPT                               = 0.620
+Total seconds in IPOPT                               = 0.623
 
 EXIT: Error in step computation!
 
@@ -167,7 +170,7 @@ p2                        =            2 	 (limited)
 p3                        =            0                      	 (fixed)
 p4                        =            2 	 (limited)
 Info in <TCanvas::Print>: file Ipopt_ma77.png has been created
-Real time 0:00:01, CP time 1.040
+Real time 0:00:01, CP time 1.060
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
@@ -182,27 +185,27 @@ Total number of inequality constraints...............:        0
         inequality constraints with only upper bounds:        0
 
 
-Number of Iterations....: 3000
+Number of Iterations....: 73
 
                                    (scaled)                 (unscaled)
-Objective...............:   1.3533184419896746e-02    5.7295549340224591e+02
-Dual infeasibility......:   8.6483238884292150e-08    3.6614476880343851e-03
+Objective...............:   1.3533184419925057e-02    5.7295549340344451e+02
+Dual infeasibility......:   2.2079467734953881e-08    9.3478016242358930e-04
 Constraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
 Variable bound violation:   0.0000000000000000e+00    0.0000000000000000e+00
-Complementarity.........:   1.0000000086468249e-11    4.2337079033233419e-07
-Overall NLP error.......:   8.6483238884292150e-08    3.6614476880343851e-03
+Complementarity.........:   1.0000271967346085e-11    4.2338230097444725e-07
+Overall NLP error.......:   2.2079467734953881e-08    9.3478016242358930e-04
 
 
-Number of objective function evaluations             = 98244
-Number of objective gradient evaluations             = 3001
+Number of objective function evaluations             = 550
+Number of objective gradient evaluations             = 74
 Number of equality constraint evaluations            = 0
 Number of inequality constraint evaluations          = 0
 Number of equality constraint Jacobian evaluations   = 0
 Number of inequality constraint Jacobian evaluations = 0
 Number of Lagrangian Hessian evaluations             = 0
-Total seconds in IPOPT                               = 4030.093
+Total seconds in IPOPT                               = 42.013
 
-EXIT: Maximum Number of Iterations Exceeded.
+EXIT: Optimal Solution Found.
 
 
 Solution of the primal variables, x
@@ -215,39 +218,42 @@ x[4] = 0.9979
 
 Solution of the bound multipliers, z_L and z_U
 z_L[0] = 0
-z_L[1] = 4.24106e-07
-z_L[2] = 4.23055e-07
+z_L[1] = 4.24105e-07
+z_L[2] = 4.23056e-07
 z_L[3] = 0
-z_L[4] = 4.24262e-07
+z_L[4] = 4.24273e-07
 z_U[0] = 0
 z_U[1] = 4.23297e-08
 z_U[2] = 4.70451e-08
 z_U[3] = 0
-z_U[4] = 4.70302e-08
+z_U[4] = 4.70301e-08
 
 
 Objective value
 f(x*) = 572.955
 
 Final value of the constraints:
-Warning in <Fit>: Abnormal termination of minimization.
 
-****************************************
-         Invalid FitResult  (status = -1 )
+
+*** The problem solved in 73 iterations!
+
+
+*** The final value of the objective function is 572.955.
+
 ****************************************
 Minimizer is Ipopt / ma86
 MinFCN                    =      572.955
 Chi2                      =      1064.97
 NDf                       =          996
 Edm                       =            0
-NCalls                    =        98244
+NCalls                    =          550
 p0                        =       399492
 p1                        =  -0.00173343 	 (limited)
 p2                        =      1.00075 	 (limited)
 p3                        =            0                      	 (fixed)
 p4                        =       0.9979 	 (limited)
 Info in <TCanvas::Print>: file Ipopt_ma86.png has been created
-Real time 1:07:10, CP time 4030.670
+Real time 0:00:42, CP time 42.640
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 do fitting ...
@@ -262,32 +268,32 @@ Total number of inequality constraints...............:        0
         inequality constraints with only upper bounds:        0
 
 
-Number of Iterations....: 3000
+Number of Iterations....: 65
 
                                    (scaled)                 (unscaled)
-Objective...............:   1.3533184419902313e-02    5.7295549340248158e+02
-Dual infeasibility......:   3.1557305058465679e-08    1.3360441067835787e-03
+Objective...............:   1.3533184420939925e-02    5.7295549344641108e+02
+Dual infeasibility......:   1.0851260781350958e-05    4.5941068133783802e-01
 Constraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
 Variable bound violation:   0.0000000000000000e+00    0.0000000000000000e+00
-Complementarity.........:   1.0000000283931150e-11    4.2337079869233656e-07
-Overall NLP error.......:   3.1557305058465679e-08    1.3360441067835787e-03
+Complementarity.........:   1.0000023814687463e-11    4.2337179491581770e-07
+Overall NLP error.......:   1.0851260781350958e-05    4.5941068133783802e-01
 
 
-Number of objective function evaluations             = 89060
-Number of objective gradient evaluations             = 3001
+Number of objective function evaluations             = 475
+Number of objective gradient evaluations             = 66
 Number of equality constraint evaluations            = 0
 Number of inequality constraint evaluations          = 0
 Number of equality constraint Jacobian evaluations   = 0
 Number of inequality constraint Jacobian evaluations = 0
 Number of Lagrangian Hessian evaluations             = 0
-Total seconds in IPOPT                               = 3753.390
+Total seconds in IPOPT                               = 36.273
 
-EXIT: Maximum Number of Iterations Exceeded.
+EXIT: Optimal Solution Found.
 
 
 Solution of the primal variables, x
 x[0] = 399492
-x[1] = -0.00173343
+x[1] = -0.00173364
 x[2] = 1.00075
 x[3] = 0
 x[4] = 0.9979
@@ -295,10 +301,10 @@ x[4] = 0.9979
 
 Solution of the bound multipliers, z_L and z_U
 z_L[0] = 0
-z_L[1] = 4.24106e-07
-z_L[2] = 4.23055e-07
+z_L[1] = 4.24107e-07
+z_L[2] = 4.23056e-07
 z_L[3] = 0
-z_L[4] = 4.24262e-07
+z_L[4] = 4.2426e-07
 z_U[0] = 0
 z_U[1] = 4.23297e-08
 z_U[2] = 4.70451e-08
@@ -310,22 +316,25 @@ Objective value
 f(x*) = 572.955
 
 Final value of the constraints:
-Warning in <Fit>: Abnormal termination of minimization.
 
-****************************************
-         Invalid FitResult  (status = -1 )
+
+*** The problem solved in 65 iterations!
+
+
+*** The final value of the objective function is 572.955.
+
 ****************************************
 Minimizer is Ipopt / ma97
 MinFCN                    =      572.955
 Chi2                      =      1064.97
 NDf                       =          996
 Edm                       =            0
-NCalls                    =        89060
+NCalls                    =          475
 p0                        =       399492
-p1                        =  -0.00173343 	 (limited)
+p1                        =  -0.00173364 	 (limited)
 p2                        =      1.00075 	 (limited)
 p3                        =            0                      	 (fixed)
 p4                        =       0.9979 	 (limited)
 Info in <TCanvas::Print>: file Ipopt_ma97.png has been created
-Real time 1:02:34, CP time 3753.980
+Real time 0:00:37, CP time 36.920
 (int) 0
