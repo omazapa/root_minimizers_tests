@@ -115,10 +115,11 @@ int ipopt_langauss()
    //testLanGaus("Ipopt","spral");
    //testLanGaus("Ipopt","ma27");
    //std::string methods[]={"mumps","ma57","ma77","ma86","ma97"};
-   std::string methods[]={"mumps","ma77","ma86","ma97"};
+   std::string methods[]={"mumps","ma27","ma57","ma77","ma86","ma97"};
    //TStopwatch t;
     for(const std::string &text : methods)
     {
+      std::cout<<"=== Ipopt  ===  "<<text.c_str()<<" ==="<<std::endl;
        testLanGaus("Ipopt",text.c_str());
 
     }
