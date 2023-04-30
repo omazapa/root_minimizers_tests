@@ -28,10 +28,10 @@ void run_fitBenchmark(int n = 1000) {
 
    //SCIPY METHODS
    //trust-krylov, trust-exact  (Jacobian is required for trust region)
-   // "Newton-CG" (Jacobian is required for Newton-CG method)
+   // "trust-ncg" (Jacobian is required for Newton-CG method)
    // "dogleg" (Jacobian is required for dogleg minimization)
    //std::string methods[]={"Nelder-Mead","L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG", "dogleg", "trust-ncg","trust-exact","trust-krylov"};
-   std::string methods[]={"L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr", "trust-ncg"};
+   std::string methods[]={"L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG" };
    for(const std::string &method : methods)
    {
    fitBenchmark(n,"Scipy",method.c_str(),seed,0,10);
