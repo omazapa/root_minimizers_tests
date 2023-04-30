@@ -391,3 +391,8 @@ Real time 0:05:01, CP time 301.810
 Warning in <TROOT::Append>: Replacing existing TH1: h1 (Potential memory leak).
 0.25
 Info in <GeneticMinimizer::SetVariable>: Variables should be limited - set automatic range to 50 times step size for p0 : [-1400.000000, 1600.000000]
+
+ *** Break *** keyboard interrupt
+
+ *** Break *** segmentation violation
+do fitting ...

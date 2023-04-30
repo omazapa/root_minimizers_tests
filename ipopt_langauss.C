@@ -113,16 +113,18 @@ int ipopt_langauss()
 // checking for MA97... yes
 // checking for MC68... yes
    //testLanGaus("Ipopt","spral");
+   testLanGaus("Ipopt","pardisomkl");
+   
    //testLanGaus("Ipopt","ma27");
    //std::string methods[]={"mumps","ma57","ma77","ma86","ma97"};
-   std::string methods[]={"mumps","ma27","ma57","ma77","ma86","ma97"};
-   //TStopwatch t;
-    for(const std::string &text : methods)
-    {
-      std::cout<<"=== Ipopt  ===  "<<text.c_str()<<" ==="<<std::endl;
-       testLanGaus("Ipopt",text.c_str());
+   // std::string methods[]={"mumps","ma27","ma57","ma77","ma86","ma97"};
+   // //TStopwatch t;
+   //  for(const std::string &text : methods)
+   //  {
+   //    std::cout<<"=== Ipopt  ===  "<<text.c_str()<<" ==="<<std::endl;
+   //     testLanGaus("Ipopt",text.c_str());
 
-    }
+   //  }
    return 0;
 }
 
