@@ -11,7 +11,7 @@ Processing rosenbrock.C...
 === Status: 0
 === Message: Optimization terminated successfully.
 === Function calls: 143
-Results Method : Scipy / Nelder-Mead Minimum: f(1.00025,1.00048)= 1.00244e-07 Cpu Time (sec) = 0 Real Time (sec) = 0.00205898
+Results Method : Scipy / Nelder-Mead 	 Minimum: f(1.00025,1.00048)= 1.00244e-07 	 Real Time (sec) = 0.00220919	 ncalls = 143
 
 ===============
 === Scipy Minimization
@@ -23,7 +23,7 @@ Results Method : Scipy / Nelder-Mead Minimum: f(1.00025,1.00048)= 1.00244e-07 Cp
 === Status: 0
 === Message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
 === Function calls: 39
-Results Method : Scipy / L-BFGS-B Minimum: f(0.989527,0.979671)= 0.000135345 Cpu Time (sec) = 0.01 Real Time (sec) = 0.000845909
+Results Method : Scipy / L-BFGS-B 	 Minimum: f(0.989527,0.979671)= 0.000135345 	 Real Time (sec) = 0.000965118	 ncalls = 39
 
 ===============
 === Scipy Minimization
@@ -37,7 +37,7 @@ Results Method : Scipy / L-BFGS-B Minimum: f(0.989527,0.979671)= 0.000135345 Cpu
 === Status: 0
 === Message: Optimization terminated successfully.
 === Function calls: 90
-Results Method : Scipy / Powell Minimum: f(0.946311,0.89546)= 0.00288269 Cpu Time (sec) = 0 Real Time (sec) = 0.00110507
+Results Method : Scipy / Powell 	 Minimum: f(0.946311,0.89546)= 0.00288269 	 Real Time (sec) = 0.00119901	 ncalls = 90
 
 ===============
 === Scipy Minimization
@@ -51,7 +51,7 @@ Results Method : Scipy / Powell Minimum: f(0.946311,0.89546)= 0.00288269 Cpu Tim
 === Status: 0
 === Message: Optimization terminated successfully.
 === Function calls: 76
-Results Method : Scipy / CG Minimum: f(0.999882,0.999763)= 1.40068e-08 Cpu Time (sec) = 0 Real Time (sec) = 0.00140095
+Results Method : Scipy / CG 	 Minimum: f(0.999882,0.999763)= 1.40068e-08 	 Real Time (sec) = 0.00157285	 ncalls = 76
 
 ===============
 === Scipy Minimization
@@ -65,7 +65,7 @@ Results Method : Scipy / CG Minimum: f(0.999882,0.999763)= 1.40068e-08 Cpu Time 
 === Status: 0
 === Message: Optimization terminated successfully.
 === Function calls: 38
-Results Method : Scipy / BFGS Minimum: f(0.999998,0.999995)= 1.73581e-11 Cpu Time (sec) = 0.01 Real Time (sec) = 0.00840402
+Results Method : Scipy / BFGS 	 Minimum: f(0.999998,0.999995)= 1.73581e-11 	 Real Time (sec) = 0.00794888	 ncalls = 38
 
 ===============
 === Scipy Minimization
@@ -77,7 +77,7 @@ Results Method : Scipy / BFGS Minimum: f(0.999998,0.999995)= 1.73581e-11 Cpu Tim
 === Status: 1
 === Message: Converged (|f_n-f_(n-1)| ~= 0)
 === Function calls: 74
-Results Method : Scipy / TNC Minimum: f(0.960173,0.923253)= 0.00176042 Cpu Time (sec) = 0 Real Time (sec) = 0.00161695
+Results Method : Scipy / TNC 	 Minimum: f(0.960173,0.923253)= 0.00176042 	 Real Time (sec) = 0.000572205	 ncalls = 74
 
 ===============
 === Scipy Minimization
@@ -93,7 +93,7 @@ Results Method : Scipy / TNC Minimum: f(0.960173,0.923253)= 0.00176042 Cpu Time 
 === Status: 1
 === Message: Optimization terminated successfully.
 === Function calls: 867
-Results Method : Scipy / COBYLA Minimum: f(0.734408,0.540742)= 0.0707316 Cpu Time (sec) = 0 Real Time (sec) = 0.00280309
+Results Method : Scipy / COBYLA 	 Minimum: f(0.734408,0.540742)= 0.0707316 	 Real Time (sec) = 0.00106907	 ncalls = 867
 
 ===============
 === Scipy Minimization
@@ -105,7 +105,7 @@ Results Method : Scipy / COBYLA Minimum: f(0.734408,0.540742)= 0.0707316 Cpu Tim
 === Status: 0
 === Message: Optimization terminated successfully
 === Function calls: 47
-Results Method : Scipy / SLSQP Minimum: f(0.984231,0.966611)= 0.000689839 Cpu Time (sec) = 0.01 Real Time (sec) = 0.003052
+Results Method : Scipy / SLSQP 	 Minimum: f(0.984231,0.966611)= 0.000689839 	 Real Time (sec) = 0.00105691	 ncalls = 47
 
 ===============
 === Scipy Minimization
@@ -116,8 +116,8 @@ Results Method : Scipy / SLSQP Minimum: f(0.984231,0.966611)= 0.000689839 Cpu Ti
 === Success: 1
 === Status: 2
 === Message: `xtol` termination condition is satisfied.
-=== Function calls: 759
-Results Method : Scipy / trust-constr Minimum: f(0.779889,0.60593)= 0.0489762 Cpu Time (sec) = 0.46 Real Time (sec) = 0.465243
+=== Function calls: 763
+Results Method : Scipy / trust-constr 	 Minimum: f(0.779896,0.605942)= 0.0489728 	 Real Time (sec) = 0.448981	 ncalls = 763
 
 ===============
 === Scipy Minimization
@@ -129,7 +129,7 @@ Results Method : Scipy / trust-constr Minimum: f(0.779889,0.60593)= 0.0489762 Cp
 === Status: 2
 === Message: Warning: Desired error not necessarily achieved due to precision loss.
 === Function calls: 1
-Results Method : Scipy / Newton-CG Minimum: f(-1.2,1)= 24.2 Cpu Time (sec) = 0 Real Time (sec) = 0.000471115
+Results Method : Scipy / Newton-CG 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 0.000471115	 ncalls = 1
 
 ===============
 === Scipy Minimization
@@ -156,7 +156,7 @@ Traceback (most recent call last):
   File "/usr/lib/python3/dist-packages/numpy/lib/function_base.py", line 628, in asarray_chkfinite
     raise ValueError(
 ValueError: array must not contain infs or NaNs
-Results Method : Scipy / dogleg Minimum: f(-1.2,1)= 24.2 Cpu Time (sec) = 0.03 Real Time (sec) = 0.025512
+Results Method : Scipy / dogleg 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 0.0255601	 ncalls = 0
 
 ===============
 === Scipy Minimization
@@ -187,7 +187,7 @@ Traceback (most recent call last):
   File "/usr/lib/python3/dist-packages/numpy/lib/function_base.py", line 628, in asarray_chkfinite
     raise ValueError(
 ValueError: array must not contain infs or NaNs
-Results Method : Scipy / trust-ncg Minimum: f(-1.2,1)= 24.2 Cpu Time (sec) = 0 Real Time (sec) = 0.000613928
+Results Method : Scipy / trust-ncg 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 0.000631094	 ncalls = 0
 
 ===============
 === Scipy Minimization
@@ -195,36 +195,11 @@ Results Method : Scipy / trust-ncg Minimum: f(-1.2,1)= 24.2 Cpu Time (sec) = 0 R
 === Initial value: (-1.2,1)
 /usr/lib/python3/dist-packages/scipy/optimize/_minimize.py:569: RuntimeWarning: Method trust-exact cannot handle bounds.
   warn('Method %s cannot handle bounds.' % method,
-/usr/lib/python3/dist-packages/scipy/optimize/_trustregion_exact.py:410: RuntimeWarning: overflow encountered in scalar multiply
-  lambda_current = max(np.sqrt(lambda_lb * lambda_ub),
-/usr/lib/python3/dist-packages/scipy/optimize/_trustregion_exact.py:300: RuntimeWarning: invalid value encountered in multiply
-  H = self.hess+lambda_current*np.eye(n)
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/scipy/optimize/_minimize.py", line 721, in minimize
-    res = _minimize_trustregion_exact(fun, x0, args, jac, hess,
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/scipy/optimize/_trustregion_exact.py", line 39, in _minimize_trustregion_exact
-    return _minimize_trust_region(fun, x0, args=args, jac=jac, hess=hess,
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/scipy/optimize/_trustregion.py", line 224, in _minimize_trust_region
-    p, hits_boundary = m.solve(trust_radius)
-                       ^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/scipy/optimize/_trustregion_exact.py", line 416, in solve
-    delta, v = singular_leading_submatrix(H, U, info)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/scipy/optimize/_trustregion_exact.py", line 181, in singular_leading_submatrix
-    v[:k-1] = solve_triangular(U[:k-1, :k-1], -U[:k-1, k-1])
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/scipy/linalg/_basic.py", line 337, in solve_triangular
-    a1 = _asarray_validated(a, check_finite=check_finite)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/scipy/_lib/_util.py", line 252, in _asarray_validated
-    a = toarray(a)
-        ^^^^^^^^^^
-  File "/usr/lib/python3/dist-packages/numpy/lib/function_base.py", line 628, in asarray_chkfinite
-    raise ValueError(
-ValueError: array must not contain infs or NaNs
-Results Method : Scipy / trust-exact Minimum: f(-1.2,1)= 24.2 Cpu Time (sec) = 0 Real Time (sec) = 0.000910997
+=== Success: 0
+=== Status: 2
+=== Message: A bad approximation caused failure to predict improvement.
+=== Function calls: 1
+Results Method : Scipy / trust-exact 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 0.000299931	 ncalls = 1
 
 ===============
 === Scipy Minimization
@@ -236,90 +211,90 @@ Results Method : Scipy / trust-exact Minimum: f(-1.2,1)= 24.2 Cpu Time (sec) = 0
 === Status: 2
 === Message: A bad approximation caused failure to predict improvement.
 === Function calls: 29
-Results Method : Scipy / trust-krylov Minimum: f(-1.2,1)= 24.2 Cpu Time (sec) = 0.01 Real Time (sec) = 0.00812483
+Results Method : Scipy / trust-krylov 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 0.00800514	 ncalls = 29
 
 ===============
 Warning in <TMinuitMinimizer::SetLowerLimitedVariable>: not implemented - use as upper limit 1.E7 instead of +inf
-Results Method : Minuit / Migrad Minimum: f(0.999973,0.999941)= 3.5236e-09 Cpu Time (sec) = 0 Real Time (sec) = 3.88622e-05
+Results Method : Minuit / Migrad 	 Minimum: f(0.999973,0.999941)= 3.5236e-09 	 Real Time (sec) = 4.00543e-05	 ncalls = 173
 
 ===============
 Warning in <TMinuitMinimizer::SetLowerLimitedVariable>: not implemented - use as upper limit 1.E7 instead of +inf
-Results Method : Minuit / Simplex Minimum: f(0.996549,0.993087)= 1.19645e-05 Cpu Time (sec) = 0 Real Time (sec) = 1.5974e-05
+Results Method : Minuit / Simplex 	 Minimum: f(0.996549,0.993087)= 1.19645e-05 	 Real Time (sec) = 1.5974e-05	 ncalls = 148
 
 ===============
 Warning in <TMinuitMinimizer::SetLowerLimitedVariable>: not implemented - use as upper limit 1.E7 instead of +inf
-Results Method : Minuit / Combined Minimum: f(0.999973,0.999941)= 3.5236e-09 Cpu Time (sec) = 0 Real Time (sec) = 2.09808e-05
+Results Method : Minuit / Combined 	 Minimum: f(0.999973,0.999941)= 3.5236e-09 	 Real Time (sec) = 2.19345e-05	 ncalls = 173
 
 ===============
 Warning in <TMinuitMinimizer::SetLowerLimitedVariable>: not implemented - use as upper limit 1.E7 instead of +inf
-Results Method : Minuit / MigradImproved Minimum: f(0.999973,0.999941)= 3.5236e-09 Cpu Time (sec) = 0 Real Time (sec) = 2.59876e-05
+Results Method : Minuit / MigradImproved 	 Minimum: f(0.999973,0.999941)= 3.5236e-09 	 Real Time (sec) = 2.59876e-05	 ncalls = 241
 
 ===============
 Warning in <TMinuitMinimizer::SetLowerLimitedVariable>: not implemented - use as upper limit 1.E7 instead of +inf
-Results Method : Minuit / Scan Minimum: f(-1.2,1.4)= 5 Cpu Time (sec) = 0.01 Real Time (sec) = 0.0126019
+Results Method : Minuit / Scan 	 Minimum: f(-1.2,1.4)= 5 	 Real Time (sec) = 0.0125971	 ncalls = 95
 
 ===============
 Warning in <TMinuitMinimizer::SetLowerLimitedVariable>: not implemented - use as upper limit 1.E7 instead of +inf
-Results Method : Minuit / Seek Minimum: f(0.99998,0.999967)= 5.55668e-09 Cpu Time (sec) = 0.28 Real Time (sec) = 0.275637
+Results Method : Minuit / Seek 	 Minimum: f(0.99998,0.999967)= 5.55668e-09 	 Real Time (sec) = 0.270539	 ncalls = 2790137
 
 ===============
-Results Method : Minuit2 / Migrad Minimum: f(0.999922,0.999847)= 6.77939e-09 Cpu Time (sec) = 0 Real Time (sec) = 0.000179052
+Results Method : Minuit2 / Migrad 	 Minimum: f(0.999922,0.999847)= 6.77939e-09 	 Real Time (sec) = 0.000176907	 ncalls = 112
 
 ===============
-Results Method : Minuit2 / Simplex Minimum: f(1.00165,1.00296)= 1.50617e-05 Cpu Time (sec) = 0 Real Time (sec) = 4.1008e-05
+Results Method : Minuit2 / Simplex 	 Minimum: f(1.00165,1.00296)= 1.50617e-05 	 Real Time (sec) = 4.29153e-05	 ncalls = 164
 
 ===============
-Results Method : Minuit2 / Combined Minimum: f(0.999922,0.999847)= 6.77939e-09 Cpu Time (sec) = 0 Real Time (sec) = 3.8147e-05
+Results Method : Minuit2 / Combined 	 Minimum: f(0.999922,0.999847)= 6.77939e-09 	 Real Time (sec) = 3.88622e-05	 ncalls = 112
 
 ===============
-Results Method : Minuit2 / MigradImproved Minimum: f(0.999922,0.999847)= 6.77939e-09 Cpu Time (sec) = 0 Real Time (sec) = 3.29018e-05
+Results Method : Minuit2 / MigradImproved 	 Minimum: f(0.999922,0.999847)= 6.77939e-09 	 Real Time (sec) = 3.31402e-05	 ncalls = 112
 
 ===============
-Results Method : Minuit2 / Scan Minimum: f(-1.18,1.02)= 18.6206 Cpu Time (sec) = 0 Real Time (sec) = 1.97887e-05
+Results Method : Minuit2 / Scan 	 Minimum: f(-1.18,1.02)= 18.6206 	 Real Time (sec) = 1.90735e-05	 ncalls = 1
 
 ===============
-Results Method : Minuit2 / Seek Minimum: f(0.999922,0.999847)= 6.77939e-09 Cpu Time (sec) = 0 Real Time (sec) = 3.09944e-05
+Results Method : Minuit2 / Seek 	 Minimum: f(0.999922,0.999847)= 6.77939e-09 	 Real Time (sec) = 3.09944e-05	 ncalls = 112
 
 ===============
-Results Method : Minuit2 / Fumili2 Minimum: f(0.999922,0.999847)= 6.77939e-09 Cpu Time (sec) = 0 Real Time (sec) = 3.00407e-05
+Results Method : Minuit2 / Fumili2 	 Minimum: f(0.999922,0.999847)= 6.77939e-09 	 Real Time (sec) = 2.98023e-05	 ncalls = 112
 
 ===============
 Error in <SetFunction>: Wrong Fit method function type used for Fumili
 Error in <ROOT::Math::Minimizer::SetVariableLowerLimit>: Setting an existing variable limit not implemented
-Results Method : Fumili /  Minimum: f(-1.2,1)= 24.2 Cpu Time (sec) = 0 Real Time (sec) = 4.19617e-05
+Results Method : Fumili /  	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 4.3869e-05	 ncalls = 0
 
 ===============
-Results Method : GSLMultiMin / ConjugateFR Minimum: f(0.999991,0.999982)= 7.65385e-11 Cpu Time (sec) = 0 Real Time (sec) = 0.000169992
+Results Method : GSLMultiMin / ConjugateFR 	 Minimum: f(0.999991,0.999982)= 7.65385e-11 	 Real Time (sec) = 0.0001719	 ncalls = 267
 
 ===============
-Results Method : GSLMultiMin / ConjugatePR Minimum: f(0.999979,0.999958)= 4.45863e-10 Cpu Time (sec) = 0 Real Time (sec) = 7.48634e-05
+Results Method : GSLMultiMin / ConjugatePR 	 Minimum: f(0.999979,0.999958)= 4.45863e-10 	 Real Time (sec) = 6.91414e-05	 ncalls = 226
 
 ===============
-Results Method : GSLMultiMin / BFGS Minimum: f(0.999962,0.999923)= 1.46711e-09 Cpu Time (sec) = 0 Real Time (sec) = 6.41346e-05
+Results Method : GSLMultiMin / BFGS 	 Minimum: f(0.999962,0.999923)= 1.46711e-09 	 Real Time (sec) = 6.38962e-05	 ncalls = 211
 
 ===============
-Results Method : GSLMultiMin / BFGS2 Minimum: f(1,1)= 4.334e-12 Cpu Time (sec) = 0 Real Time (sec) = 3.69549e-05
+Results Method : GSLMultiMin / BFGS2 	 Minimum: f(1,1)= 4.334e-12 	 Real Time (sec) = 3.60012e-05	 ncalls = 80
 
 ===============
-Results Method : GSLMultiMin / SteepestDescent Minimum: f(0.999231,0.998461)= 5.91288e-07 Cpu Time (sec) = 0 Real Time (sec) = 0.00117207
+Results Method : GSLMultiMin / SteepestDescent 	 Minimum: f(0.999231,0.998461)= 5.91288e-07 	 Real Time (sec) = 0.00114989	 ncalls = 3722
 
 ===============
-Results Method : GSLMultiFit / trust_lm Minimum: f(-1.2,1)= 24.2 Cpu Time (sec) = 0 Real Time (sec) = 9.53674e-07
+Results Method : GSLMultiFit / trust_lm 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 9.53674e-07	 ncalls = 1579199576
 
 ===============
-Results Method : GSLMultiFit / trust_lmaccel Minimum: f(-1.2,1)= 24.2 Cpu Time (sec) = 0 Real Time (sec) = 9.53674e-07
+Results Method : GSLMultiFit / trust_lmaccel 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 1.19209e-06	 ncalls = 0
 
 ===============
-Results Method : GSLMultiFit / trust_dogleg Minimum: f(-1.2,1)= 24.2 Cpu Time (sec) = 0 Real Time (sec) = 0
+Results Method : GSLMultiFit / trust_dogleg 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 0	 ncalls = 0
 
 ===============
-Results Method : GSLMultiFit / trust_ddogleg Minimum: f(-1.2,1)= 24.2 Cpu Time (sec) = 0 Real Time (sec) = 0
+Results Method : GSLMultiFit / trust_ddogleg 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 0	 ncalls = 0
 
 ===============
-Results Method : GSLMultiFit / subspace2D Minimum: f(-1.2,1)= 24.2 Cpu Time (sec) = 0 Real Time (sec) = 0
+Results Method : GSLMultiFit / subspace2D 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 9.53674e-07	 ncalls = 0
 
 ===============
-Results Method : GSLSimAn /  Minimum: f(0.996053,0.992213)= 1.63958e-05 Cpu Time (sec) = 0 Real Time (sec) = 0.00144601
+Results Method : GSLSimAn /  	 Minimum: f(0.996053,0.992213)= 1.63958e-05 	 Real Time (sec) = 0.00169396	 ncalls = 0
 
 ===============
 (int) 0

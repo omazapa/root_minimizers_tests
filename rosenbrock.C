@@ -83,9 +83,9 @@ void fit(const char* minName, const char* algoName, int &success,double &time, d
       f_value = RosenBrock(xs);
       time = t.RealTime();
       cout << "Results Method : " << minName<<" / "<<algoName;
-      cout << " Minimum: f(" << xs[0] << "," << xs[1] << ")= " 
+      cout << " \t Minimum: f(" << xs[0] << "," << xs[1] << ")= " 
          << f_value;
-      cout << " Cpu Time (sec) = " << t.CpuTime() << " Real Time (sec) = " << time << endl;
+      cout << " \t Real Time (sec) = " << time << "\t ncalls = "<<ncalls<< endl;
       cout << endl << "===============" << endl;
 
       
