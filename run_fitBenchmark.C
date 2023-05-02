@@ -2,10 +2,11 @@
 
 void run_fitBenchmark(int n = 1000) {
 
-   useNumConv = false;
+   useConvMode = NoConv;
    useLogLFit = true;
+   useAD = false;
    initParamMode = InitParamClose;
-   
+
    int seed = GenerateSeed();
    std::cout << "using seed " << seed << std::endl;
    //ROOT METHODS
