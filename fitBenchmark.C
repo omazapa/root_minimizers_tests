@@ -42,6 +42,12 @@ bool useLogLFit = true;
 
 bool useNumConv = false;
 
+enum { NoConv = 0, NumConv = 1, FFTConv = 2 };  // convolution mode
+
+int useConvMode = NoConv;
+
+bool useAD = true;
+
 enum { InitParamFixed = 1, InitParamClose = 2, InitParamFar = 3 };
 
 int initParamMode = InitParamClose;   // select mode for initial parameters
@@ -58,7 +64,7 @@ TString fumiliMethod = "tr";
 
 
 double genPars[] = {10.,1,0.5,1.,0.1, 1, 0.05};
-//{1.,1.,1.,1.,0.3,1.}  // 3 poly parameters + 3 BreitWigner (Amplitude, Gamma, Mean} + 1 conv gaussian
+//{1.,1.,1.,1.,0.3,1.}  // 3 poly parameters + 3 BreitWigner (Amplitude, Gamma, Mean} + 1 conv gaussian sigma
 
 double initPars[] = { 1,1,1,100,.3, 0.5, 0.2 };
 
@@ -94,8 +100,8 @@ double fitFunction(double *x, double *par) {
   return background(x,par) + lorentzianPeak(x,&par[3]);
 }
 
-// std::string bkgFormula = "[0] + [1]*x + [2]*x*x";
-// std::string sigFormula = "0.5*[0]*[1]/TMath::Pi()/TMath::Max(1.e-10,(x-[2])*(x-[2]) + 0.25*[1]*[1])";
+std::string bkgFormula = "[0] * exp(-([1]*x + [2]*x*x))";
+std::string sigFormula = "0.5*[0]*[1]/TMath::Pi()/TMath::Max(1.e-10,(x-[2])*(x-[2]) + 0.25*[1]*[1])";
 
 std::vector<TH1*> CreateHistograms(TF1 * genFcn, int npass) {
    TRandom & rng = *gRandom;
@@ -182,7 +188,9 @@ std::vector<bool> DoFit(const std::vector<TH1*>& histos, TF1 * fitFcn, const cha
    TString name2 = algoName;
    TString fitter2 = fitter;
    if (!name2.IsNull()) fitter2 = TString::Format("%s_%s",fitter,algoName);
-   TString tName = "t_" + name;
+   if (usegrad) fitter2 += "_G";
+   fitter2.ReplaceAll("-","_");
+   TString tName = "t_" + fitter2;
    TString ttName = "Fit results for " + name;
    if (!name2.IsNull()) ttName += "/" + name2;
    TNtuple *ntuple = new TNtuple(tName,ttName,"status:time:nfcn:chi2:ndf");
@@ -314,16 +322,18 @@ std::vector<bool> DoFit(const std::vector<TH1*>& histos, TF1 * fitFcn, const cha
    std::cout << "Number of failed fits (total) " << nfail+nFailChi2Only << " flagged "
              << nfail <<   " in total fits:" << npass << std::endl;
 
-                                                         pad->Update();
-                                                         TString fileOutName = TString("fitBenchmark.root");
-                                                         TString fileStat = (useNewFile) ? "RECREATE" : "UPDATE";
-                                                         if (useNewFile) seedValue.Write();  // write also seed
-                                                         TFile fileOut(fileOutName,fileStat);
-                                                         ntuple->Write();
-                                                pad->Write(TString("c_") + fitter2);
-                                                histo->Write(TString("h_") + fitter2);
-                           useNewFile = false;
-                           return ret;
+   pad->Update();
+   TString fileOutName = TString("fitBenchmark.root");
+   TString fileStat = (useNewFile) ? "RECREATE" : "UPDATE";
+   TFile fileOut(fileOutName,fileStat);
+   if (useNewFile) {
+      seedValue.Write();  // write also seed */
+   }
+   ntuple->Write();
+   pad->Write(TString("c_") + fitter2);
+   histo->Write(TString("h_") + fitter2);
+   useNewFile = false;
+   return ret;
  }
 
 
@@ -348,8 +358,8 @@ std::vector<bool> DoFit(const std::vector<TH1*>& histos, TF1 * fitFcn, const cha
    TF1 * peakFcn = new TF1("peakFcn",lorentzianPeak,0,3,3);
    TF1 * gaus = new TF1("fgaus",[](double *x, double *p){ return ROOT::Math::normal_pdf(x[0],p[0]); },-10,10,1);
 
-   TF1Convolution * sigConv = new TF1Convolution(peakFcn,gaus,0,3,false);
-   sigConv->SetExtraRange(0.1);
+   TF1Convolution * sigConv = new TF1Convolution(peakFcn,gaus,0,3, useConvMode == FFTConv);
+   sigConv->SetExtraRange(0.1);  
    TF1 * signalFcnNC = new TF1("signalFcnNC",sigConv,0,3,sigConv->GetNpar());
    TF1 * signalFcnVt = new TF1("signalFcnVt",[](double * x, double *p){ return p[0]*TMath::Voigt(x[0]-p[2], p[3],p[1]);} ,0,3,4);
 
@@ -359,14 +369,23 @@ std::vector<bool> DoFit(const std::vector<TH1*>& histos, TF1 * fitFcn, const cha
       return background(x,par) + signalFcn->EvalPar(x,&par[3]);
    };
    
-   // create a TF1 with the range from 0 to 3 and 6 parameters
-   TF1 * genFcn = new TF1("genFcn",fitFunction,0,3, 3+4);
+   TF1 * genFcn = nullptr;
+   // in case of no comvolution use formula function
+   if (useConvMode == NoConv) {
+      auto fbkg = new TF1("fbkg",bkgFormula.c_str(),0,3);
+      auto fsig = new TF1("fsig",sigFormula.c_str(),0,3);
+      genFcn =  new TF1("genFcn","fbkg+fsig",0,3);
+   }
+   else
+      // create a TF1 from the convolution with the range from 0 to 3 and 7 parameters
+      genFcn = new TF1("genFcn",fitFunction,0,3, 3+4);
+   
+   
    genFcn->SetNpx(10000);
-   //auto fbkg = new TF1("fbkg",bkgFormula.c_str(),0,3);
-   //auto fsig = new TF1("fsig",sigFormula.c_str(),0,3);
-   //fitFcn = genFcn;//new TF1("fitFcn","fbkg+fsig",0,3);
-   //fitFcn->GetFormula()->GenerateGradientPar();
-   //fitFcn->Print("V");
+
+   if (useAD && useConvMode == NoConv) 
+      genFcn->GetFormula()->GenerateGradientPar();
+   //genFcn->Print("V");
    
    gStyle->SetOptFit();
    gStyle->SetStatY(0.6);
@@ -375,8 +394,15 @@ std::vector<bool> DoFit(const std::vector<TH1*>& histos, TF1 * fitFcn, const cha
    ROOT::Math::IntegratorOneDimOptions::SetDefaultIntegrator("Gauss");
 
    verbose = verb;
-   
+   bool usegrad = (useAD) ? true : false;   
 
+   std::cout << "Running benchmark"; 
+   if (usegrad) std::cout << " with gradients from AD, ";
+   if (useConvMode == NumConv) std::cout << " with numerical convolution";
+   else if (useConvMode == FFTConv) std::cout << " with FFT  convolution";
+   else std::cout << " no convolution";
+   std::cout << " " << std::endl;
+   
    std::vector<TH1*> histos;
    TFile * f = nullptr;
    // try open a file
@@ -407,12 +433,15 @@ std::vector<bool> DoFit(const std::vector<TH1*>& histos, TF1 * fitFcn, const cha
    if (minimName == "plot") {
       return 0;
    }
-   
-   std::cout << "do fitting......." << std::endl;
 
    genFcn->SetName("fitFcn");
+
+
+   std::cout << "do fitting....... " << std::endl;
+
+   
    if (minimName != "") {
-      DoFit(histos,genFcn,minimName,aName, gPad, false,""); // try with improve
+      DoFit(histos,genFcn,minimName,aName, gPad, usegrad,""); // try with improve
       //TString fName = "fitBench_" + minimName + ".root";
       //gPad->SaveAs(fName);
       return 0;
