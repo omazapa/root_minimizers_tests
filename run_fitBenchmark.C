@@ -4,7 +4,7 @@ void run_fitBenchmark(int n = 1000) {
 
    useConvMode = NoConv;
    useLogLFit = true;
-   useAD = false;
+   useAD = true;
    initParamMode = InitParamClose;
 
    int seed = GenerateSeed();

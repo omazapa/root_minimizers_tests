@@ -324,6 +324,7 @@ std::vector<bool> DoFit(const std::vector<TH1*>& histos, TF1 * fitFcn, const cha
 
    pad->Update();
    TString fileOutName = TString("fitBenchmark.root");
+   if(useAD) fileOutName = TString("fitBenchmarkAD.root");
    TString fileStat = (useNewFile) ? "RECREATE" : "UPDATE";
    TFile fileOut(fileOutName,fileStat);
    if (useNewFile) {
