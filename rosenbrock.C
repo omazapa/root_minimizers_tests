@@ -48,26 +48,19 @@ void fit(const char* minName, const char* algoName, int &success,double &time, d
    }
       minimizer->SetMaxFunctionCalls(1000000);
       minimizer->SetMaxIterations(100000);
-      minimizer->SetTolerance(1e-3);
+      minimizer->SetTolerance(1e-5); //increased, requested by Lorenzo
       //minimizer->SetExtraOption("gtol",1e-3);
       ROOT::Math::GradFunctor f(&RosenBrock,&RosenBrockGrad,2); 
       double step[2] = {0.01,0.01};
       double variable[2] = { -1.2,1.0};
    
       minimizer->SetFunction(f);
-//      minimizer.SetHessianFunction(RosenBrockHessian);
+      //minimizer->SetHessianFunction(RosenBrockHessian);
    
       // Set the free variables to be minimized!
-      minimizer->SetLowerLimitedVariable(0,"x",variable[0], step[0],-2);
-      //minimizer.SetVariable(0,"x",variable[0], step[0]);
+      minimizer->SetVariable(0,"x",variable[0], step[0]);
       minimizer->SetVariable(1,"y",variable[1], step[1]);
-      //minimizer.SetVariableLimits(0, -2.0, 2.0);
-      //minimizer.SetVariableLowerLimit(0, -10); //BUG WITH THIS
-      minimizer->SetVariableLimits(1, -2.0, 2.0);
-      //ROOT::Fit::ParameterSettings varsettings;
-      //minimizer.GetVariableSettings(0, varsettings);
-      //std::cout<<"HAS LOWER LIMMIT ="<<varsettings.HasLowerLimit()<<std::endl;      
-      //std::cout<<"LOWER LIMMIT ="<<varsettings.LowerLimit()<<std::endl;
+      minimizer->SetPrintLevel(1);
       TStopwatch t;
 
       t.Reset();
@@ -87,8 +80,6 @@ void fit(const char* minName, const char* algoName, int &success,double &time, d
          << f_value;
       cout << " \t Real Time (sec) = " << time << "\t ncalls = "<<ncalls<< endl;
       cout << endl << "===============" << endl;
-
-      
 }
 
 // methods that requires hessian to work "dogleg", "trust-ncg","trust-exact","trust-krylov"
@@ -97,8 +88,11 @@ int rosenbrock()
 { 
    TFile fileOut("Rosenbrock.root","RECREATE");
    std::string methods[]={"Nelder-Mead","L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG", "dogleg", "trust-ncg","trust-exact","trust-krylov"};
+   
+//   ROOT::Math::MinimizerOptions::SetDefaultMaxIterations(10000);
+//ROOT::Math::MinimizerOptions::SetDefaultTolerance   	
+   
    TTree t1("t1","Performance Results");
-
    TString minName;
    TString algoName;
    int success;
