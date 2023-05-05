@@ -9,7 +9,7 @@ Processing rosenbrock.C...
 === Status: 0
 === Message: Optimization terminated successfully.
 === Function calls: 176
-Results Method : Scipy / Nelder-Mead 	 Minimum: f(0.999999,0.999998)= 3.81167e-12 	 Real Time (sec) = 0.00163102	 ncalls = 176
+Results Method : Scipy / Nelder-Mead 	 Minimum: f(0.999999,0.999998)= 3.81167e-12 	 Real Time (sec) = 0.00180602	 ncalls = 176
 
 ===============
 === Scipy Minimization
@@ -19,7 +19,7 @@ Results Method : Scipy / Nelder-Mead 	 Minimum: f(0.999999,0.999998)= 3.81167e-1
 === Status: 0
 === Message: CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
 === Function calls: 43
-Results Method : Scipy / L-BFGS-B 	 Minimum: f(1,1.00001)= 5.29856e-10 	 Real Time (sec) = 0.000852823	 ncalls = 43
+Results Method : Scipy / L-BFGS-B 	 Minimum: f(1,1.00001)= 5.29856e-10 	 Real Time (sec) = 0.00099802	 ncalls = 43
 
 ===============
 === Scipy Minimization
@@ -31,7 +31,7 @@ Results Method : Scipy / L-BFGS-B 	 Minimum: f(1,1.00001)= 5.29856e-10 	 Real Ti
 === Status: 0
 === Message: Optimization terminated successfully.
 === Function calls: 719
-Results Method : Scipy / Powell 	 Minimum: f(1,1)= 5.17493e-28 	 Real Time (sec) = 0.00451303	 ncalls = 719
+Results Method : Scipy / Powell 	 Minimum: f(1,1)= 5.17493e-28 	 Real Time (sec) = 0.004951	 ncalls = 719
 
 ===============
 === Scipy Minimization
@@ -41,7 +41,7 @@ Results Method : Scipy / Powell 	 Minimum: f(1,1)= 5.17493e-28 	 Real Time (sec)
 === Status: 0
 === Message: Optimization terminated successfully.
 === Function calls: 78
-Results Method : Scipy / CG 	 Minimum: f(1,1)= 1.87618e-14 	 Real Time (sec) = 0.00155807	 ncalls = 78
+Results Method : Scipy / CG 	 Minimum: f(1,1)= 1.87618e-14 	 Real Time (sec) = 0.00168705	 ncalls = 78
 
 ===============
 === Scipy Minimization
@@ -51,7 +51,7 @@ Results Method : Scipy / CG 	 Minimum: f(1,1)= 1.87618e-14 	 Real Time (sec) = 0
 === Status: 0
 === Message: Optimization terminated successfully.
 === Function calls: 39
-Results Method : Scipy / BFGS 	 Minimum: f(1,1)= 2.5353e-15 	 Real Time (sec) = 0.00785303	 ncalls = 39
+Results Method : Scipy / BFGS 	 Minimum: f(1,1)= 2.5353e-15 	 Real Time (sec) = 0.0154529	 ncalls = 39
 
 ===============
 === Scipy Minimization
@@ -90,7 +90,7 @@ tnc: Converged (|f_n-f_(n-1)| ~= 0)
 === Status: 1
 === Message: Converged (|f_n-f_(n-1)| ~= 0)
 === Function calls: 76
-Results Method : Scipy / TNC 	 Minimum: f(1.0001,1.0002)= 9.64991e-09 	 Real Time (sec) = 0.00182104	 ncalls = 76
+Results Method : Scipy / TNC 	 Minimum: f(1.0001,1.0002)= 9.64991e-09 	 Real Time (sec) = 0.000741959	 ncalls = 76
 
 ===============
 === Scipy Minimization
@@ -102,7 +102,7 @@ Results Method : Scipy / TNC 	 Minimum: f(1.0001,1.0002)= 9.64991e-09 	 Real Tim
 === Status: 1
 === Message: Optimization terminated successfully.
 === Function calls: 7950
-Results Method : Scipy / COBYLA 	 Minimum: f(0.989514,0.979073)= 0.000110379 	 Real Time (sec) = 0.0211909	 ncalls = 7950
+Results Method : Scipy / COBYLA 	 Minimum: f(0.989514,0.979073)= 0.000110379 	 Real Time (sec) = 0.00887799	 ncalls = 7950
 
 ===============
 === Scipy Minimization
@@ -112,7 +112,7 @@ Results Method : Scipy / COBYLA 	 Minimum: f(0.989514,0.979073)= 0.000110379 	 R
 === Status: 0
 === Message: Optimization terminated successfully
 === Function calls: 46
-Results Method : Scipy / SLSQP 	 Minimum: f(0.999363,0.998634)= 1.25894e-06 	 Real Time (sec) = 0.00291181	 ncalls = 46
+Results Method : Scipy / SLSQP 	 Minimum: f(0.999363,0.998634)= 1.25894e-06 	 Real Time (sec) = 0.00107813	 ncalls = 46
 
 ===============
 === Scipy Minimization
@@ -122,7 +122,7 @@ Results Method : Scipy / SLSQP 	 Minimum: f(0.999363,0.998634)= 1.25894e-06 	 Re
 === Status: 1
 === Message: `gtol` termination condition is satisfied.
 === Function calls: 61
-Results Method : Scipy / trust-constr 	 Minimum: f(0.999999,0.999999)= 4.87147e-13 	 Real Time (sec) = 0.051661	 ncalls = 61
+Results Method : Scipy / trust-constr 	 Minimum: f(0.999999,0.999999)= 4.87147e-13 	 Real Time (sec) = 0.051553	 ncalls = 61
 
 ===============
 === Scipy Minimization
@@ -132,7 +132,7 @@ Results Method : Scipy / trust-constr 	 Minimum: f(0.999999,0.999999)= 4.87147e-
 === Status: 0
 === Message: Optimization terminated successfully.
 === Function calls: 105
-Results Method : Scipy / Newton-CG 	 Minimum: f(1,0.999999)= 1.68155e-13 	 Real Time (sec) = 0.00402093	 ncalls = 105
+Results Method : Scipy / Newton-CG 	 Minimum: f(1,0.999999)= 1.68155e-13 	 Real Time (sec) = 0.0044558	 ncalls = 105
 
 ===============
 === Scipy Minimization
@@ -144,7 +144,7 @@ Traceback (most recent call last):
   File "/home/ozapatam/anaconda3/lib/python3.9/site-packages/scipy/optimize/_trustregion_dogleg.py", line 32, in _minimize_dogleg
     raise ValueError('Hessian is required for dogleg minimization')
 ValueError: Hessian is required for dogleg minimization
-Results Method : Scipy / dogleg 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 0.000170946	 ncalls = 0
+Results Method : Scipy / dogleg 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 0.000216007	 ncalls = 0
 
 ===============
 === Scipy Minimization
@@ -156,7 +156,7 @@ Traceback (most recent call last):
   File "/home/ozapatam/anaconda3/lib/python3.9/site-packages/scipy/optimize/_trustregion_ncg.py", line 35, in _minimize_trust_ncg
     raise ValueError('Either the Hessian or the Hessian-vector product '
 ValueError: Either the Hessian or the Hessian-vector product is required for Newton-CG trust-region minimization
-Results Method : Scipy / trust-ncg 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 0.00011611	 ncalls = 0
+Results Method : Scipy / trust-ncg 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 0.000138044	 ncalls = 0
 
 ===============
 === Scipy Minimization
@@ -168,7 +168,7 @@ Traceback (most recent call last):
   File "/home/ozapatam/anaconda3/lib/python3.9/site-packages/scipy/optimize/_trustregion_exact.py", line 37, in _minimize_trustregion_exact
     raise ValueError('Hessian matrix is required for trust region '
 ValueError: Hessian matrix is required for trust region exact minimization.
-Results Method : Scipy / trust-exact 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 9.98974e-05	 ncalls = 0
+Results Method : Scipy / trust-exact 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 0.000108957	 ncalls = 0
 
 ===============
 === Scipy Minimization
@@ -180,7 +180,7 @@ Traceback (most recent call last):
   File "/home/ozapatam/anaconda3/lib/python3.9/site-packages/scipy/optimize/_trustregion_krylov.py", line 26, in _minimize_trust_krylov
     raise ValueError('Either the Hessian or the Hessian-vector product '
 ValueError: Either the Hessian or the Hessian-vector product is required for Krylov trust-region minimization
-Results Method : Scipy / trust-krylov 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 8.89301e-05	 ncalls = 0
+Results Method : Scipy / trust-krylov 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 9.89437e-05	 ncalls = 0
 
 ===============
  **********
@@ -197,7 +197,7 @@ Results Method : Scipy / trust-krylov 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (se
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
    1  x            9.99998e-01   1.29099e+00   1.00000e-03  -1.92839e-06
    2  y            9.99996e-01   2.58521e+00   1.56250e-03  -9.70197e-07
-Results Method : Minuit / Migrad 	 Minimum: f(0.999998,0.999996)= 3.75343e-12 	 Real Time (sec) = 8.08239e-05	 ncalls = 128
+Results Method : Minuit / Migrad 	 Minimum: f(0.999998,0.999996)= 3.75343e-12 	 Real Time (sec) = 0.000116825	 ncalls = 128
 
 ===============
  **********
@@ -223,7 +223,7 @@ Results Method : Minuit / Migrad 	 Minimum: f(0.999998,0.999996)= 3.75343e-12 	 
   NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
    1  x            9.99837e-01   1.30183e+00   1.00000e-03   9.99837e-01
    2  y            9.99725e-01   2.60647e+00   1.56250e-03   9.99725e-01
-Results Method : Minuit / Simplex 	 Minimum: f(0.999837,0.999725)= 2.77194e-07 	 Real Time (sec) = 4.88758e-05	 ncalls = 157
+Results Method : Minuit / Simplex 	 Minimum: f(0.999837,0.999725)= 2.77194e-07 	 Real Time (sec) = 5.00679e-05	 ncalls = 157
 
 ===============
  **********
@@ -240,7 +240,7 @@ Results Method : Minuit / Simplex 	 Minimum: f(0.999837,0.999725)= 2.77194e-07 	
   NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
    1  x            9.99998e-01   1.29099e+00   1.00000e-03  -1.92839e-06
    2  y            9.99996e-01   2.58521e+00   1.56250e-03  -9.70197e-07
-Results Method : Minuit / Combined 	 Minimum: f(0.999998,0.999996)= 3.75343e-12 	 Real Time (sec) = 5.6982e-05	 ncalls = 128
+Results Method : Minuit / Combined 	 Minimum: f(0.999998,0.999996)= 3.75343e-12 	 Real Time (sec) = 3.60012e-05	 ncalls = 128
 
 ===============
  **********
@@ -270,7 +270,7 @@ START ATTEMPT NO. 1 TO FIND NEW MINIMUM
   NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
    1  x            9.99998e-01   1.00069e+00   3.44837e-06   9.99998e-01
    2  y            9.99996e-01   2.00388e+00   3.45267e-05   9.99996e-01
-Results Method : Minuit / MigradImproved 	 Minimum: f(0.999998,0.999996)= 3.75343e-12 	 Real Time (sec) = 5.10216e-05	 ncalls = 160
+Results Method : Minuit / MigradImproved 	 Minimum: f(0.999998,0.999996)= 3.75343e-12 	 Real Time (sec) = 6.00815e-05	 ncalls = 160
 
 ===============
  **********
@@ -294,7 +294,7 @@ Results Method : Minuit / MigradImproved 	 Minimum: f(0.999998,0.999996)= 3.7534
   NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
    1  x           -1.19000e+00   1.09503e-01   2.89148e-03  -1.19000e+00
    2  y            1.01100e+00   2.78849e-01   7.36312e-03   1.01100e+00
-Results Method : Minuit / Scan 	 Minimum: f(-1.19,1.011)= 21.2067 	 Real Time (sec) = 0.0122249	 ncalls = 59
+Results Method : Minuit / Scan 	 Minimum: f(-1.19,1.011)= 21.2067 	 Real Time (sec) = 0.013629	 ncalls = 59
 
 ===============
  **********
@@ -314,7 +314,7 @@ Results Method : Minuit / Scan 	 Minimum: f(-1.19,1.011)= 21.2067 	 Real Time (s
   NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
    1  x            9.99855e-01   1.28468e+00   1.00000e-03   9.99855e-01
    2  y            9.99681e-01   2.57222e+00   1.56250e-03   9.99681e-01
-Results Method : Minuit / Seek 	 Minimum: f(0.999855,0.999681)= 1.06636e-07 	 Real Time (sec) = 0.309909	 ncalls = 3928588
+Results Method : Minuit / Seek 	 Minimum: f(0.999855,0.999681)= 1.06636e-07 	 Real Time (sec) = 0.343105	 ncalls = 3928588
 
 ===============
 Minuit2Minimizer: Minimize with max-calls 1000000 convergence for edm < 1e-05 strategy 1
@@ -325,7 +325,7 @@ Edm   = 1.08383347317261393e-10
 Nfcn  = 115
 x	  = 0.999992	 +/-  1.00498
 y	  = 0.999984	 +/-  2.01245
-Results Method : Minuit2 / Migrad 	 Minimum: f(0.999992,0.999984)= 1.078e-10 	 Real Time (sec) = 0.000245094	 ncalls = 115
+Results Method : Minuit2 / Migrad 	 Minimum: f(0.999992,0.999984)= 1.078e-10 	 Real Time (sec) = 0.000275135	 ncalls = 115
 
 ===============
 Minuit2Minimizer: Minimize with max-calls 1000000 convergence for edm < 1e-05 strategy 1
@@ -336,7 +336,7 @@ Edm   = 6.38611908252856054e-06
 Nfcn  = 147
 x	  = 0.999137	 +/-  1.03883
 y	  = 0.998215	 +/-  2.03787
-Results Method : Minuit2 / Simplex 	 Minimum: f(0.999137,0.998215)= 1.10361e-06 	 Real Time (sec) = 4.79221e-05	 ncalls = 147
+Results Method : Minuit2 / Simplex 	 Minimum: f(0.999137,0.998215)= 1.10361e-06 	 Real Time (sec) = 5.6982e-05	 ncalls = 147
 
 ===============
 Minuit2Minimizer: Minimize with max-calls 1000000 convergence for edm < 1e-05 strategy 1
@@ -347,7 +347,7 @@ Edm   = 1.08383347317261393e-10
 Nfcn  = 115
 x	  = 0.999992	 +/-  1.00498
 y	  = 0.999984	 +/-  2.01245
-Results Method : Minuit2 / Combined 	 Minimum: f(0.999992,0.999984)= 1.078e-10 	 Real Time (sec) = 7.20024e-05	 ncalls = 115
+Results Method : Minuit2 / Combined 	 Minimum: f(0.999992,0.999984)= 1.078e-10 	 Real Time (sec) = 4.79221e-05	 ncalls = 115
 
 ===============
 Minuit2Minimizer: Minimize with max-calls 1000000 convergence for edm < 1e-05 strategy 1
@@ -358,7 +358,7 @@ Edm   = 1.08383347317261393e-10
 Nfcn  = 115
 x	  = 0.999992	 +/-  1.00498
 y	  = 0.999984	 +/-  2.01245
-Results Method : Minuit2 / MigradImproved 	 Minimum: f(0.999992,0.999984)= 1.078e-10 	 Real Time (sec) = 4.00543e-05	 ncalls = 115
+Results Method : Minuit2 / MigradImproved 	 Minimum: f(0.999992,0.999984)= 1.078e-10 	 Real Time (sec) = 4.19617e-05	 ncalls = 115
 
 ===============
 Minuit2Minimizer: Minimize with max-calls 1000000 convergence for edm < 1e-05 strategy 1
@@ -369,7 +369,7 @@ Edm   = 0
 Nfcn  = 1
 x	  = -1.18	 +/-  0.01
 y	  = 1.02	 +/-  0.01
-Results Method : Minuit2 / Scan 	 Minimum: f(-1.18,1.02)= 18.6206 	 Real Time (sec) = 5.4121e-05	 ncalls = 1
+Results Method : Minuit2 / Scan 	 Minimum: f(-1.18,1.02)= 18.6206 	 Real Time (sec) = 3.50475e-05	 ncalls = 1
 
 ===============
 Minuit2Minimizer: Minimize with max-calls 1000000 convergence for edm < 1e-05 strategy 1
@@ -380,7 +380,7 @@ Edm   = 1.08383347317261393e-10
 Nfcn  = 115
 x	  = 0.999992	 +/-  1.00498
 y	  = 0.999984	 +/-  2.01245
-Results Method : Minuit2 / Seek 	 Minimum: f(0.999992,0.999984)= 1.078e-10 	 Real Time (sec) = 3.79086e-05	 ncalls = 115
+Results Method : Minuit2 / Seek 	 Minimum: f(0.999992,0.999984)= 1.078e-10 	 Real Time (sec) = 4.1008e-05	 ncalls = 115
 
 ===============
 Minuit2Minimizer: Minimize with max-calls 1000000 convergence for edm < 1e-05 strategy 1
@@ -391,7 +391,7 @@ Edm   = 1.08383347317261393e-10
 Nfcn  = 115
 x	  = 0.999992	 +/-  1.00498
 y	  = 0.999984	 +/-  2.01245
-Results Method : Minuit2 / Fumili2 	 Minimum: f(0.999992,0.999984)= 1.078e-10 	 Real Time (sec) = 5.29289e-05	 ncalls = 115
+Results Method : Minuit2 / Fumili2 	 Minimum: f(0.999992,0.999984)= 1.078e-10 	 Real Time (sec) = 3.91006e-05	 ncalls = 115
 
 ===============
 Error in <SetFunction>: Wrong Fit method function type used for Fumili
@@ -402,7 +402,7 @@ Minimize using TFumili with tolerance = 1e-05 max calls 1000000
   NO.   NAME          VALUE        ERROR       NEGATIVE      POSITIVE  
    1 x            -1.20000e+00   0.00000e+00 -1.00000e+300  1.00000e+300
    2 y             1.00000e+00   0.00000e+00 -1.00000e+300  1.00000e+300
-Results Method : Fumili /  	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 3.91006e-05	 ncalls = 0
+Results Method : Fumili /  	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 7.58171e-05	 ncalls = 0
 
 ===============
 Minimize using GSLMinimizer conjugate_fr
@@ -412,7 +412,7 @@ Niterations  = 141
 NCalls     = 228
 x	  = 1
 y	  = 1
-Results Method : GSLMultiMin / ConjugateFR 	 Minimum: f(1,1)= 9.83383e-17 	 Real Time (sec) = 0.000174999	 ncalls = 228
+Results Method : GSLMultiMin / ConjugateFR 	 Minimum: f(1,1)= 9.83383e-17 	 Real Time (sec) = 0.000233889	 ncalls = 228
 
 ===============
 Minimize using GSLMinimizer conjugate_pr
@@ -422,7 +422,7 @@ Niterations  = 118
 NCalls     = 198
 x	  = 1
 y	  = 1
-Results Method : GSLMultiMin / ConjugatePR 	 Minimum: f(1,1)= 1.34068e-18 	 Real Time (sec) = 6.8903e-05	 ncalls = 198
+Results Method : GSLMultiMin / ConjugatePR 	 Minimum: f(1,1)= 1.34068e-18 	 Real Time (sec) = 6.50883e-05	 ncalls = 198
 
 ===============
 Minimize using GSLMinimizer vector_bfgs
@@ -432,7 +432,7 @@ Niterations  = 124
 NCalls     = 204
 x	  = 1
 y	  = 1
-Results Method : GSLMultiMin / BFGS 	 Minimum: f(1,1)= 6.99395e-17 	 Real Time (sec) = 6.69956e-05	 ncalls = 204
+Results Method : GSLMultiMin / BFGS 	 Minimum: f(1,1)= 6.99395e-17 	 Real Time (sec) = 6.60419e-05	 ncalls = 204
 
 ===============
 Minimize using GSLMinimizer vector_bfgs2
@@ -442,7 +442,7 @@ Niterations  = 18
 NCalls     = 67
 x	  = 1
 y	  = 1
-Results Method : GSLMultiMin / BFGS2 	 Minimum: f(1,1)= 1.1515e-14 	 Real Time (sec) = 3.60012e-05	 ncalls = 67
+Results Method : GSLMultiMin / BFGS2 	 Minimum: f(1,1)= 1.1515e-14 	 Real Time (sec) = 3.71933e-05	 ncalls = 67
 
 ===============
 Minimize using GSLMinimizer steepest_descent
@@ -452,11 +452,11 @@ Niterations  = 7854
 NCalls     = 8891
 x	  = 0.999989
 y	  = 0.999978
-Results Method : GSLMultiMin / SteepestDescent 	 Minimum: f(0.999989,0.999978)= 1.23683e-10 	 Real Time (sec) = 0.00273609	 ncalls = 8891
+Results Method : GSLMultiMin / SteepestDescent 	 Minimum: f(0.999989,0.999978)= 1.23683e-10 	 Real Time (sec) = 0.00275993	 ncalls = 8891
 
 ===============
 GSLNLSMinimizer: Invalid function set - only FitMethodFunction types are supported
-Results Method : GSLMultiFit / trust_lm 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 9.05991e-06	 ncalls = -1351827864
+Results Method : GSLMultiFit / trust_lm 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 1.00136e-05	 ncalls = 450127704
 
 ===============
 GSLNLSMinimizer: Invalid function set - only FitMethodFunction types are supported
@@ -468,7 +468,7 @@ Results Method : GSLMultiFit / trust_dogleg 	 Minimum: f(-1.2,1)= 24.2 	 Real Ti
 
 ===============
 GSLNLSMinimizer: Invalid function set - only FitMethodFunction types are supported
-Results Method : GSLMultiFit / trust_ddogleg 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 9.53674e-07	 ncalls = 0
+Results Method : GSLMultiFit / trust_ddogleg 	 Minimum: f(-1.2,1)= 24.2 	 Real Time (sec) = 1.90735e-06	 ncalls = 0
 
 ===============
 GSLNLSMinimizer: Invalid function set - only FitMethodFunction types are supported
@@ -488,7 +488,7 @@ GSLSimAnMinimizer: Minimum Found
 FVAL         = 9.63529699681184762e-07
 x	  = 1.00089
 y	  = 1.00174
-Results Method : GSLSimAn /  	 Minimum: f(1.00089,1.00174)= 9.6353e-07 	 Real Time (sec) = 0.00144005	 ncalls = 0
+Results Method : GSLSimAn /  	 Minimum: f(1.00089,1.00174)= 9.6353e-07 	 Real Time (sec) = 0.00152397	 ncalls = 0
 
 ===============
 (int) 0

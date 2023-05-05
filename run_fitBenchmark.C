@@ -4,8 +4,12 @@ void run_fitBenchmark(int n = 1000) {
 
    useConvMode = NoConv;
    useLogLFit = true;
-   useAD = true;
+   useAD = false;
    initParamMode = InitParamClose;
+
+   //this is new Lorenzo!
+   ROOT::Math::MinimizerOptions::SetDefaultMaxIterations(10000);
+   ROOT::Math::MinimizerOptions::SetDefaultTolerance(1e-5);   
 
    int seed = GenerateSeed();
    std::cout << "using seed " << seed << std::endl;
@@ -31,10 +35,14 @@ void run_fitBenchmark(int n = 1000) {
    //trust-krylov, trust-exact, "trust-ncg"  (Jacobian is required for trust region)
    //"Newton-CG"  (Jacobian is required for Newton-CG method)
    // "dogleg" (Jacobian is required for dogleg minimization)
-   //std::string methods[]={"Nelder-Mead","L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG", "dogleg", "trust-ncg","trust-exact","trust-krylov"};
-   std::string methods[]={"Nelder-Mead","L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG", "dogleg","trust-exact","trust-krylov"};
+      //this is new Lorenzo!
+
+   //std::string methods[]={"Nelder-Mead","L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG", "dogleg","trust-exact","trust-krylov"};
    
    //std::string methods[]={"L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr",};
+   
+   //RUNING OVER ALL METHODS, IF REQUIRES JACOBIAN OR HESSIAN AND IT IS NOT PROVIDED, IT WILL FAIL
+   std::string methods[]={"Nelder-Mead","L-BFGS-B","Powell","CG","BFGS","TNC","COBYLA","SLSQP","trust-constr","Newton-CG", "dogleg", "trust-ncg","trust-exact","trust-krylov"};
    for(const std::string &method : methods)
    {
    fitBenchmark(n,"Scipy",method.c_str(),seed,0,10);
